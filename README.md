@@ -8,10 +8,10 @@
 
 1. `clone this repo`
 2. `cd path/to/...`
-3. `yarn install gulpjs/gulp-cli -g`  
+3. `yarn add gulpjs/gulp-cli -g`  
 > Установка последней версии Gulp CLI tools глобально (подробнее - [GitHub](https://github.com/gulpjs/gulp/blob/4.0/docs/getting-started.md) )
 
-4. `yarn install`
+4. `yarn add`
 6. `run gulp` 
 
 #### В сборку добавлены таски:
