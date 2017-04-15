@@ -11,7 +11,7 @@
 3. `yarn add gulpjs/gulp-cli -g`  
 > Установка последней версии Gulp CLI tools глобально (подробнее - [GitHub](https://github.com/gulpjs/gulp/blob/4.0/docs/getting-started.md) )
 
-4. `yarn add`
+4. `yarn install`
 6. `run gulp` 
 
 #### В сборку добавлены таски:
