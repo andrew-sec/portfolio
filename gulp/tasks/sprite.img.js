@@ -12,7 +12,7 @@ module.exports = function() {
   }));
 
   return  $.gp.spriteData.img.pipe($.gulp.dest($.config.root + '/assets/img/')),
-          $.gp.spriteData.css.pipe($.gulp.dest($.config.root + '/assets/style/'));
+          $.gp.spriteData.css.pipe($.gulp.dest($.config.root + '/assets/css/'));
 });
 
 };

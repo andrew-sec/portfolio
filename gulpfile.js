@@ -37,3 +37,5 @@ $.gulp.task('default', $.gulp.series(
     'serve'
   )
 ));
+
+$.gulp.task ('clean:cache');
