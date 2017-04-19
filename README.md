@@ -1,4 +1,4 @@
-# Учебная сборка Loftschool
+# Учебный проект-портфолио
 
 ## Секачев Андрей 
 
@@ -13,11 +13,3 @@
 
 4. `yarn install`
 6. `run gulp` 
-
-#### В сборку добавлены таски:
-
-1. `sprite:img - для создания спрайтов, плагин gulp.spritesmith.`
-
-2. `copy:fonts - копирует шрифты в /build. Так же сгенерированы шрифты и добавлены в папку /source/fonts `
-
-3. `jquery перенеcен из devDependencies в dependencies`
