@@ -1,0 +1,11 @@
+.triangle {
+  height: 100px;
+  width: 50%;
+
+  &__left {
+    fill: $grey;
+  }
+  &__right {
+    fill: $beige;
+  }
+}

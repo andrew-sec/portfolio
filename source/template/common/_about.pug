@@ -1,0 +1,96 @@
+.wrapper
+  .maincontent
+    header.header(style='background-image:url(assets/img/main-bg.jpg)')
+      .header__socials.socials
+        ul.socials__list
+          each item in ['vk', 'git', 'in']
+            li.socials__item
+              a(href='#' class=`socials__link socials__link_${item}`)= item
+      
+      .header__hamburger-menu.hamburger-menu
+        a.hamburger-menu__trigger(href='#') Меню
+      .hidden-menu(style='display: none')
+        nav.navigation.navigation_location_burger
+          ul.pages__list
+            each item in ['Мои работы', 'Обо мне', 'Блог', 'Авторизация']
+              li.pages__item
+                a(href='#' class='pages__link')= item
+
+      .header__login-box.login-box
+            .login-box__pic(style='background-image: url(img/content/photo_small.jpg)')
+              //- img.login-box__pic-elem(src='img/content/photo_small.jpg', alt='Аватар')
+            .login-box__name
+              | Андрей Секачев
+            .login-box__descr
+              | Личный сайт веб разработчика 
+      .header__arrow-scroll.arrow-scroll
+        a.arrow-scroll__link(href='#')
+          svg.arrow-scroll__pic(width='25.18px' height='16.164px' viewBox='0 0 25.18 16.164')
+            g
+              path(d='M13.293,15.871c-0.391,0.391-1.016,0.391-1.406,0L0.293,4.293c-0.391-0.391-0.391-1.031,0-1.422\
+              l2.594-2.578c0.391-0.391,1.016-0.391,1.406,0L12.59,8.59l8.297-8.297c0.391-0.391,1.016-0.391,1.406,0l2.594,2.578\
+              c0.391,0.391,0.391,1.031,0,1.422L13.293,15.871z')
+
+    section(class='section section__about')
+      .about.about_column_left
+        svg(class='triangle about__triangles' xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 100', preserveAspectRatio='none')
+          polygon(class='triangle__left' points='0,0 0,100 1000,100')
+        .title.about__title
+          | Обо мне
+        .about-user
+          .about-user__image
+            img(class='about-user__pic' src='assets/img/user-pic.jpg', alt='user-pic')
+          .about-user__title.subtitle
+              | Кто я
+          .about-user__text
+            p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+            p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+      .about.about_column_right
+        svg(class='triangle about__triangles' xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 100', preserveAspectRatio='none')
+          polygon(class='triangle__right' points='0,100 1000,100 1000,0')
+        .about-info
+          .about-info__description.about-user-info
+            .about-user-info__title
+              .title.about__title
+                .subtitle Чем я могу быть вам полезен
+            .about-user-info__text
+              p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+          .about-info__content
+            ul.skills
+              each skill in ['Frontend', 'Backend', 'WorkFlow']
+                li.skills__item
+                  .skill-section
+                    .skill-section__title= skill
+                      ul.skill-section__list
+                        each skillName in ['HTML5', 'CSS3', 'jQuery']
+                          li.skills-section__item
+                            .skill
+                              svg.skill__circle
+                              .skill__name= skillName
+    
+    section.section.section__map
+      .map(style='background-image:url(assets/img/map.jpg)')
+      .map__contacts.contacts
+        ul.contacts__list
+          li.contacts__items
+            a.contacts__list(href='#') Skype
+          li.contacts__items
+            a.contacts__list(href='#') E-mail
+          li.contacts__items
+            a.contacts__list(href='#') Phone
+          li.contacts__items
+            a.contacts__list(href='#') Address
+  
+  footer.footer.footer_position_absolute
+    .footer_row_top
+      nav.navigation.navigation_location_footer
+          ul.pages__list
+            each item in ['Мои работы', 'Обо мне', 'Блог', 'Авторизация']
+              li.pages__item
+                a(href='#' class='pages__link')= item
+      .footer__socials.socials
+        ul.socials__list
+            each item in ['vk', 'git', 'in']
+              li.socials__item
+                a(href='#' class=`socials__link socials__link_${item}`)= item
+    .footer_row_bottom

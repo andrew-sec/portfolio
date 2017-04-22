@@ -1,0 +1,30 @@
+.section__about {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.about_column_left, .about_column_right {
+  flex-grow: 1;
+  flex-basis: 50%;
+  background-color: $grey;
+}
+
+.about_column_right {
+  background-color: $beige;
+}
+
+.about__triangles {
+  position: absolute;
+  width: 100%;
+  bottom: 100%;
+}
+
+.about-user__image {
+  text-align: right;
+}
+
+.about-user__pic {
+  width: 100%;
+  height: auto;
+  max-width: 443px;
+}

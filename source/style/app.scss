@@ -1,5 +1,10 @@
-body {
-  margin: 0;
-}
+//vars
+$grey : #efeee9;
+$beige: #eeebdf;
+$main-font-color : #373e42;
 
-@import 'common/greating';
+//Layout
+@import 'layout/adjustments';
+
+//Common (sections)
+@import 'common/**/*.scss';
