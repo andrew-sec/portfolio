@@ -3,7 +3,7 @@
 module.exports = function() {
   $.gulp.task('serve', function() {
     $.browserSync.init({
-      open: true,
+      open: false,
       server: $.config.root,
       notify: false
     });

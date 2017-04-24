@@ -1,0 +1,29 @@
+//header section
+.arrow-scroll__link_header,
+.arrow-scroll__arrow_works {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 50%;
+  bottom: 90px;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+.arrow-scroll__arrow_header,
+.arrow-scroll__arrow_works {
+  width: 100%;
+  height: 100%;
+  fill: rgba(#fff, .8);
+  &:hover {
+    fill: #fff;
+  }
+}
+
+.arrow-scroll__arrow_works {
+  height: 45px;
+}
+.arrow-scroll__arrow_works_up {
+  width: 100%;
+  transform: rotate(180deg);
+  transform-origin: 25% 50%;
+}

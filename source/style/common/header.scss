@@ -1,7 +1,64 @@
 .header {
-  position: relative;
-  overflow: hidden;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  height: 620px;
+}
+.header__socials {
+  position: absolute;
+  top: 34px;
+  left: 30px;
+}
+.socials__item_header {
+  padding-right: 20px;
+}
+.socials__link:hover .socials__icon_header {
+  fill: #fff;
+}
+.socials__icon_header {
+  fill: rgba(#fff, .5);
+}
+.header__hamburger-menu {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  height: 36px;
+  width: 40px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.hamburger-menu__bar {
+  display: block;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.header__title_transparent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.header__login-box {
+  background-color: transparent;
+}
+.login-box__pic {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center-center;
+}
+.login-box__name_header, .login-box__descr_header {
+  color: #fff;
+}
+.login-box__name_header {
+  font-size: 35px;
+}
+.login-box__descr_header {
+  font-family: 'robotolight';
+  color: rgba(#fff, .8);
 }

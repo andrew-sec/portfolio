@@ -1,0 +1,83 @@
+.title {
+  font-size: 63px;
+  font-family: 'bernier_regularregular';
+  color: $main-color;
+  position: relative;
+  text-align: center;
+}
+.h1, .works__title {
+  display: inline-block;
+  position: relative;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba($main-color, .2);
+    width: 22px;
+    height: 5px;
+  }
+  &:after {
+    right: -40px;
+  }
+  &:before {
+    left: -40px;
+  }
+}
+.works__title {
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 58px;
+  padding-bottom: 58px;
+}
+.subtitle {
+  font-size: 35px;
+}
+.h3 {
+  display: inline-block;
+  position: relative;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba($main-color, .2);
+    width: 22px;
+    height: 5px;
+  }
+  &:after {
+    right: -40px;
+  }
+
+  &:before {
+    left: -40px;
+  }
+}
+.h3_br {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 8px;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 24px;
+    background-color: rgba($main-color, .2);
+    width: 22px;
+    height: 5px;
+  }
+  &:after {
+    right: -40px;
+  }
+
+  &:before {
+    left: -40px;
+  }
+}
+.about__title_transparent {
+  position: absolute;
+  top: -31px;
+  left: 12px;
+}

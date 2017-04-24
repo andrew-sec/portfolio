@@ -1,96 +1,152 @@
+mixin svg(addClass, addId)
+  svg(class=addClass)
+    use(xlink:href=`assets/img/sprite/sprite.svg#${addId}`)
+    
 .wrapper
   .maincontent
-    header.header(style='background-image:url(assets/img/main-bg.jpg)')
-      .header__socials.socials
-        ul.socials__list
-          each item in ['vk', 'git', 'in']
-            li.socials__item
-              a(href='#' class=`socials__link socials__link_${item}`)= item
-      
-      .header__hamburger-menu.hamburger-menu
-        a.hamburger-menu__trigger(href='#') Меню
-      .hidden-menu(style='display: none')
-        nav.navigation.navigation_location_burger
-          ul.pages__list
-            each item in ['Мои работы', 'Обо мне', 'Блог', 'Авторизация']
-              li.pages__item
-                a(href='#' class='pages__link')= item
-
-      .header__login-box.login-box
-            .login-box__pic(style='background-image: url(img/content/photo_small.jpg)')
-              //- img.login-box__pic-elem(src='img/content/photo_small.jpg', alt='Аватар')
-            .login-box__name
-              | Андрей Секачев
-            .login-box__descr
-              | Личный сайт веб разработчика 
-      .header__arrow-scroll.arrow-scroll
-        a.arrow-scroll__link(href='#')
-          svg.arrow-scroll__pic(width='25.18px' height='16.164px' viewBox='0 0 25.18 16.164')
-            g
-              path(d='M13.293,15.871c-0.391,0.391-1.016,0.391-1.406,0L0.293,4.293c-0.391-0.391-0.391-1.031,0-1.422\
-              l2.594-2.578c0.391-0.391,1.016-0.391,1.406,0L12.59,8.59l8.297-8.297c0.391-0.391,1.016-0.391,1.406,0l2.594,2.578\
-              c0.391,0.391,0.391,1.031,0,1.422L13.293,15.871z')
+    include _header
 
     section(class='section section__about')
       .about.about_column_left
-        svg(class='triangle about__triangles' xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 100', preserveAspectRatio='none')
-          polygon(class='triangle__left' points='0,0 0,100 1000,100')
+        .about__title_transparent
+          img.title_pic-transparent(src="assets/img/about_header_left_bg.png", alt="about-bg")
         .title.about__title
-          | Обо мне
+          .h1 Обо мне
         .about-user
           .about-user__image
             img(class='about-user__pic' src='assets/img/user-pic.jpg', alt='user-pic')
-          .about-user__title.subtitle
-              | Кто я
+          .title.about-user__title.subtitle
+            .h3 Кто я
           .about-user__text
             p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
             p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
       .about.about_column_right
-        svg(class='triangle about__triangles' xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 100', preserveAspectRatio='none')
-          polygon(class='triangle__right' points='0,100 1000,100 1000,0')
         .about-info
           .about-info__description.about-user-info
             .about-user-info__title
-              .title.about__title
-                .subtitle Чем я могу быть вам полезен
+              .title.about__title.subtitle.about__subtitle
+                .h3_br Чем я могу быть<br> вам полезен
             .about-user-info__text
               p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
           .about-info__content
             ul.skills
-              each skill in ['Frontend', 'Backend', 'WorkFlow']
-                li.skills__item
-                  .skill-section
-                    .skill-section__title= skill
-                      ul.skill-section__list
-                        each skillName in ['HTML5', 'CSS3', 'jQuery']
-                          li.skills-section__item
-                            .skill
-                              svg.skill__circle
-                              .skill__name= skillName
+              li.skills__item
+                .skill-section
+                  .skill-section__title Frontend
+                    ul.skill-section__list
+                      li.skills-section__item
+                        .skill
+                          svg.skill__circle(viewbox='0 0 110 110')
+                            circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
+                            circle.skill__circle_second.circle-90(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                          .skill__name HTML5
+                      li.skills-section__item
+                        .skill
+                          svg.skill__circle(viewbox='0 0 110 110')
+                            circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
+                            circle.skill__circle_second.circle-85(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                          .skill__name CSS3
+                      li.skills-section__item
+                        .skill
+                          svg.skill__circle(viewbox='0 0 110 110')
+                            circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
+                            circle.skill__circle_second.circle-85(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                          .skill__name jQuery
+            ul.skills
+              li.skills__item
+                .skill-section
+                  .skill-section__title Backend
+                    ul.skill-section__list
+                      li.skills-section__item
+                        .skill
+                          svg.skill__circle(viewbox='0 0 110 110')
+                            circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
+                            circle.skill__circle_second.circle-90(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                          .skill__name PHP
+                      li.skills-section__item
+                        .skill
+                          svg.skill__circle(viewbox='0 0 110 110')
+                            circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
+                            circle.skill__circle_second.circle-85(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                          .skill__name MySQL
+                      li.skills-section__item
+                        .skill
+                          svg.skill__circle(viewbox='0 0 110 110')
+                            circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
+                            circle.skill__circle_second.circle-85(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                          .skill__name Node.js<br>&npm
+                      li.skills-section__item
+                        .skill
+                          svg.skill__circle(viewbox='0 0 110 110')
+                            circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
+                            circle.skill__circle_second.circle-85(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                          .skill__name Mongo.db
+            ul.skills
+              li.skills__item
+                .skill-section
+                  .skill-section__title Workflow
+                    ul.skill-section__list
+                      li.skills-section__item
+                        .skill
+                          svg.skill__circle(viewbox='0 0 110 110')
+                            circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
+                            circle.skill__circle_second.circle-90(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                          .skill__name Git
+                      li.skills-section__item
+                        .skill
+                          svg.skill__circle(viewbox='0 0 110 110')
+                            circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
+                            circle.skill__circle_second.circle-85(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                          .skill__name Gulp
+                      li.skills-section__item
+                        .skill
+                          svg.skill__circle(viewbox='0 0 110 110')
+                            circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
+                            circle.skill__circle_second.circle-85(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                          .skill__name Bower
     
-    section.section.section__map
-      .map(style='background-image:url(assets/img/map.jpg)')
-      .map__contacts.contacts
+    section.section.section__full-screen.section__map(style='background-image:url(assets/img/map.jpg)')
+      .map.map__contacts.contacts.login-box
+        .title.about__title.subtitle 
+          .h3 Контакты
         ul.contacts__list
-          li.contacts__items
-            a.contacts__list(href='#') Skype
-          li.contacts__items
-            a.contacts__list(href='#') E-mail
-          li.contacts__items
-            a.contacts__list(href='#') Phone
-          li.contacts__items
-            a.contacts__list(href='#') Address
-  
-  footer.footer.footer_position_absolute
-    .footer_row_top
-      nav.navigation.navigation_location_footer
-          ul.pages__list
-            each item in ['Мои работы', 'Обо мне', 'Блог', 'Авторизация']
-              li.pages__item
-                a(href='#' class='pages__link')= item
-      .footer__socials.socials
-        ul.socials__list
-            each item in ['vk', 'git', 'in']
-              li.socials__item
-                a(href='#' class=`socials__link socials__link_${item}`)= item
-    .footer_row_bottom
+          li.contacts__item
+            +svg('contacts__icon','skype_n')
+            .contacts__text skype_kdn
+          li.contacts__item
+            +svg('contacts__icon','envelope')
+            .contacts__text astahov@gmail.com
+          li.contacts__item
+            +svg('contacts__icon','phone')
+            .contacts__text +7 931 200 93 24
+          li.contacts__item
+            +svg('contacts__icon','map_marker')
+            .contacts__text г.Новосибирск, ул. Инская, д. 5
+        
+      footer.footer.footer_position_absolute
+        .footer_row_top
+          nav.navigation.navigation_location_footer
+            ul.navigation_location_footer__list
+              each item in ['Мои работы', 'Обо мне', 'Блог', 'Авторизация']
+                li.navigation_location_footer__item
+                  a(href='#' class='navigation_location_footer__link')= item
+          
+          .footer__socials.socials
+            ul.socials__list.socials__list_footer
+              li.socials__item.socials__item_footer
+                a(href='#' class=`socials__link socials__link_footer socials__link_vk`)
+                  +svg('socials__icon socials__icon_footer','vk_round')
+              li.socials__item.socials__item_footer
+                a(href='#' class=`socials__link socials__link_footer socials__link_git`)
+                  +svg('socials__icon socials__icon_footer','github_round')
+              li.socials__item.socials__item_footer
+                a(href='#' class=`socials__link socials__link_footer socials__link_in`)
+                  +svg('socials__icon socials__icon_footer','in_round')
+        
+        .footer_row_bottom
+          .footer__text.footer__text_left
+            .footer__text_about
+              | Я веб-разработчик из Киева, и этот сайт я сделал в рамках<br> обучения в Школе онлайн образования LoftSchool. 
+          .footer__text.footer__text_right
+            .copyright 
+              | © Андрей Секачев | создано с любовью в LoftSchool

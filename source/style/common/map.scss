@@ -1,0 +1,14 @@
+.section__map {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.map__contacts.contacts {
+  background-color: rgba(#fff, .85);
+}
+
+.contacts__icon {
+  width: 24px;
+  height: 24px;
+  fill: $accent-color;
+}

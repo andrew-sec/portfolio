@@ -1,5 +1,9 @@
 //Vars
 $container-width: 1200px;
+$max-image-size: 443px;
+$main-color: #455a64;
+$accent-color: #00bfa5;
+$overlay: rgba(#b6b4ae, .7);
 
 * {
 	box-sizing: border-box;
@@ -16,12 +20,11 @@ body {
 	line-height: 1.42;
 	-webkit-font-smoothing: antialiased;
 	font-family: "Roboto", sans-serif;
-	color: #000;
+	color: $main-color;
 }
 
 .wrapper {
 	height: 100%;
-	// overflow: hidden;
 	position: relative;
 }
 
@@ -30,20 +33,15 @@ body {
 	transform: translate3d(0, 0, 0);
 }
 
-.section {
+.header, .section {
 	position: relative;
 	background-size: cover;
+	min-width: $container-width;
 }
 
 .section__full-screen {
 	height: 100vh;
 	min-height: 650px;
-}
-
-.container {
-	margin: 0 auto;
-	width: $container-width;
-	position: relative;
 }
 
 ul {
@@ -64,5 +62,5 @@ table, th, td {
 }
 
 .footer {
-	min-width: $container-width + 20px;
+	min-width: $container-width;
 }

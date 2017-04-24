@@ -1,0 +1,20 @@
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  text-align: center;
+  overflow: hidden;
+}
+.login-box__pic {
+  width: 142px;
+  height: 142px;
+  margin: 40px auto 8px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.login-box__name {
+  text-transform: uppercase;
+  font-family: 'robotomedium';
+}

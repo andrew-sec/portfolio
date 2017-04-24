@@ -5,6 +5,16 @@ $main-font-color : #373e42;
 
 //Layout
 @import 'layout/adjustments';
+@import 'fonts/fonts';
+@import 'layout/normalize';
+
+//Style Parts
+@import 'parts/social-icons';
+@import 'parts/login-box';
+@import 'parts/triangles';
+@import 'parts/arrow-scroll';
+@import 'parts/titles';
+@import 'parts/circles';
 
 //Common (sections)
 @import 'common/**/*.scss';

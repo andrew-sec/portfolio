@@ -1,33 +1,38 @@
+mixin svg(addClass, addId)
+  svg(class=addClass)
+    use(xlink:href=`assets/img/sprite/sprite.svg#${addId}`)
+
 .wrapper
   .maincontent
     section(class="section section__full-screen section-welcome" style='background-image:url(assets/img/main-bg.jpg);')
-      button.button-auth Авторизоваться
-      .container
-        .login-box
-          .login-box__pic(style='background-image: url(img/content/photo_small.jpg);')
-            img.login-box__pic-elem(src='img/content/photo_small.jpg', alt='Аватар')
-          .login-box__name
-            | Андрей Секачев
-          .login-box__descr
-            | Личный сайт веб разработчика
-          .socials
-            ul.socials__list
-              li.socials__item
-                a.social__link(href="#") vk
-              li.socials__item 
-                a.social__link(href="#") git
-              li.socials__item
-                a.social__link(href="#") in
-          .pages
-            ul.pages__list
-              li.pages__item
-                a.pages__link(href="#") Мои работы
-              li.pages__item
-                a.pages__link(href="#") Обо мне
-              li.pages__item
-                a.pages__link(href="#") Блог
-footer.footer
-  .container
-    .footer__text
-      .copyright © Андрей Секачев | создано с любовью в LoftSchool       
+      a.button.button-action-auth(href=('#')) Авторизоваться
+      .login-box.login-box__welcome
+        .login-box__pic
+          img.login-box__pic-elem(src='assets/img/user.jpg', alt='user-photo')
+        .login-box__name.login-box__name_welcome
+          | Андрей Секачев
+        .login-box__descr.login-box__descr_welcome
+          | Личный сайт веб разработчика
+        .socials
+          ul.socials__list
+            li.socials__item.socials__item_welcome
+              a(href='#' class=`socials__link socials__link_vk`)
+                +svg('socials__icon socials__icon_welcome','vk')
+            li.socials__item.socials__item_welcome
+              a(href='#' class=`socials__link socials__link_git`)
+                +svg('socials__icon socials__icon_welcome','github')
+            li.socials__item.socials__item_welcome
+              a(href='#' class=`socials__link socials__link_in`)
+                +svg('socials__icon socials__icon_welcome','in')
+        nav.navigation.navigation_location_welcome
+          ul.navigation_location_welcome__list
+            li.navigation_location_welcome__item
+              a(href=`works.html` class='navigation_location_welcome__link') Мои работы
+            li.navigation_location_welcome__item
+              a(href=`about.html` class='navigation_location_welcome__link') Обо мне
+            li.navigation_location_welcome__item
+              a(href=`blog.html` class='navigation_location_welcome__link') Блог
+    footer.footer.footer__welcome
+      .footer__text_welcome
+        .copyright © Андрей Секачев | создано с любовью в LoftSchool       
       

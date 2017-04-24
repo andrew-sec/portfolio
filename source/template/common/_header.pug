@@ -1,0 +1,38 @@
+mixin svg(addClass, addId)
+  svg(class=addClass)
+    use(xlink:href=`assets/img/sprite/sprite.svg#${addId}`)
+
+header.header(style='background-image:url(assets/img/main-bg.jpg)')
+  .header__socials.socials
+    ul.socials__list
+      li.socials__item.socials__item_header
+        a(href='#' class=`socials__link socials__link_vk`)
+          +svg('socials__icon socials__icon_header','vk')
+      li.socials__item.socials__item_header
+        a(href='#' class=`socials__link socials__link_git`)
+          +svg('socials__icon socials__icon_header','github')
+      li.socials__item.socials__item_header
+        a(href='#' class=`socials__link socials__link_in`)
+          +svg('socials__icon socials__icon_header','in')
+  
+  .header__hamburger-menu.hamburger-menu
+    span.hamburger-menu__bar
+    span.hamburger-menu__bar
+    span.hamburger-menu__bar
+  
+  .header__title_transparent
+    img(src="assets/img/portfolio_header_bg.png", alt="portfolio header")
+
+  .header__login-box.login-box
+    .login-box__pic
+      img.login-box__pic-elem(src='assets/img/user.jpg', alt='user-photo')
+    .login-box__name.login-box__name_header
+      | Андрей Секачев
+    .login-box__descr.login-box__descr_header
+      | Личный сайт веб разработчика 
+  .header__arrow-scroll.arrow-scroll
+    a.arrow-scroll__arrow.arrow-scroll__link_header(href='#')
+      +svg('arrow-scroll__arrow_header','arrow_down')
+  svg(class='triangles' xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 100', preserveAspectRatio='none')
+    polygon(class='triangles__left triangles__left_white' points='0,0 0,100 500,100 500,90')
+    polygon(class='triangles__right triangles__right_white' points='1000,0   1000,100   500,100   500,90')

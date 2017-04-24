@@ -1,0 +1,93 @@
+mixin svg(addClass, addId)
+  svg(class=addClass)
+    use(xlink:href=`assets/img/sprite/sprite.svg#${addId}`)
+
+.wrapper
+  .maincontent
+    include _header
+
+    section.section.section__works
+      .title.works__title
+        | Мои работы
+      .slider.works__slider
+        .works__slider_left
+          .works__block
+            .title.works__title.subtitle
+              | Сайт школы онлайн образования
+            .works__text
+              | html, css, javascript
+        .works__slider_right
+          .slider__image_big
+            img.slider_pic(src='assets/img/slider/work-1.png', alt='work-1')
+          .sliders__image_small
+            .slider__image_small_left
+              img.slider_pic.slider_pic_small(src='assets/img/slider/work-2.png', alt='work-2')
+              .header__arrow-scroll.arrow-scroll
+                a.arrow-scroll__arrow.arrow-scroll__link_works(href='#')
+                  +svg('arrow-scroll__arrow_works','arrow_down')
+  
+            .slider__image_small_right
+              img.slider_pic.slider_pic_small(src='assets/img/slider/work-3.png', alt='work-3')
+              .header__arrow-scroll.arrow-scroll
+                a.arrow-scroll__arrow.arrow-scroll__link_works(href='#')
+                  +svg('arrow-scroll__arrow_works arrow-scroll__arrow_works_up','arrow_down')
+  
+    section.section.section__full-screen.section__feedback      
+      .title.feedback__title
+        | Что обо мне говорят 
+      .feedback__section
+        .feedback__block_left
+          .feedback__text
+            p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+          
+          .feedback__pic
+          
+          .feedback__name
+            | Ковальчук Дмитрий
+          .feedback__pos
+            | основатель Loftschool
+
+        .feedback__block_right
+          .feedback__text
+            p Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+          .feedback__pic
+          
+          .feedback__name
+            | Сабанцев Владимир
+          .feedback__pos
+            | преподаватель
+        form.feedback__form
+          .title.form__title.subtitle
+          | Связаться со мной
+          input(type='text' placeholder='Имя')
+          input(type='email' placeholder='E-mail')
+          textarea(placeholder='Ваше сообщение')
+          input(type='submit' value='Отправить')
+          input(type='reset' value='Очистить')
+      footer.footer.footer_position_absolute
+        .footer_row_top
+          nav.navigation.navigation_location_footer
+            ul.navigation_location_footer__list
+              each item in ['Мои работы', 'Обо мне', 'Блог', 'Авторизация']
+                li.navigation_location_footer__item
+                  a(href='#' class='navigation_location_footer__link')= item
+          
+          .footer__socials.socials
+            ul.socials__list.socials__list_footer
+              li.socials__item.socials__item_footer
+                a(href='#' class=`socials__link socials__link_footer socials__link_vk`)
+                  +svg('socials__icon socials__icon_footer','vk_round')
+              li.socials__item.socials__item_footer
+                a(href='#' class=`socials__link socials__link_footer socials__link_git`)
+                  +svg('socials__icon socials__icon_footer','github_round')
+              li.socials__item.socials__item_footer
+                a(href='#' class=`socials__link socials__link_footer socials__link_in`)
+                  +svg('socials__icon socials__icon_footer','in_round')
+        
+        .footer_row_bottom
+          .footer__text.footer__text_left
+            .footer__text_about
+              | Я веб-разработчик из Киева, и этот сайт я сделал в рамках<br> обучения в Школе онлайн образования LoftSchool. 
+          .footer__text.footer__text_right
+            .copyright 
+              | © Андрей Секачев | создано с любовью в LoftSchool

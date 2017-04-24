@@ -1,6 +1,70 @@
-// .login-box {
-//   height: 500px;
-//   width: 500px;
-//   margin: 50% auto;
-//   transform: translateY(-50%);
-// }
+.section-welcome {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; 
+}
+.button {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  color: #fff;
+  background-color: transparent;
+  padding: 14px 28px;
+  display: inline-block;
+  text-decoration: none;
+}
+.button-action-auth {
+  position: absolute;
+  top: 24px;
+  right: 100px;
+  
+  &:hover {
+    background-color: #fff;
+    color: $accent-color;
+  }
+}
+.login-box__welcome {
+  background-color: rgba(#fff, .85);
+}
+.login-box__name_welcome {
+  font-size: 28px;
+}
+.socials__item_welcome {
+  padding: 40px 12px;
+}
+.socials__link:hover .socials__icon_welcome {
+  fill: $accent-color;
+}
+.socials__icon_welcome {
+  fill: rgba($accent-color, .5);
+}
+.navigation_location_welcome__list {
+  display: flex; 
+  justify-content: space-between;
+}
+.navigation_location_welcome__item {
+  border-right: 1px solid #fff;
+  &:last-child{
+    border: none;
+  }
+}
+.navigation_location_welcome__link {
+  padding: 14px 32px;
+  background-color: rgba($accent-color, .85);
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  &:hover {
+    background-color: #009688;
+  }
+}
+.footer__welcome {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+ .footer__text_welcome {
+   color: #fff;
+   font-family: 'robotolight'; 
+ }
