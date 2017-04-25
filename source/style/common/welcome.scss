@@ -3,25 +3,6 @@
   background-repeat: no-repeat;
   background-position: center center; 
 }
-.button {
-  border: 1px solid #fff;
-  border-radius: 4px;
-  color: #fff;
-  background-color: transparent;
-  padding: 14px 28px;
-  display: inline-block;
-  text-decoration: none;
-}
-.button-action-auth {
-  position: absolute;
-  top: 24px;
-  right: 100px;
-  
-  &:hover {
-    background-color: #fff;
-    color: $accent-color;
-  }
-}
 .login-box__welcome {
   background-color: rgba(#fff, .85);
 }

@@ -1,9 +1,10 @@
 //Vars
-$container-width: 1200px;
+$container-width: 800px;
 $max-image-size: 443px;
 $main-color: #455a64;
 $accent-color: #00bfa5;
 $overlay: rgba(#b6b4ae, .7);
+$blog-overlay: rgba(#016672, .3);
 
 * {
 	box-sizing: border-box;
@@ -59,6 +60,13 @@ h1,h2,h3,h4,h5,h6 {
 
 table, th, td {
 	border-collapse: collapse;
+}
+img {
+	height: auto;
+}
+
+textarea {
+  resize: vertical;
 }
 
 .footer {
