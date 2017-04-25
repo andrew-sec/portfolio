@@ -1,0 +1,47 @@
+.form__block {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); 
+  display: inline-block; 
+  border-radius: 0 0 5px 5px;
+  overflow: hidden;
+  background: url('../img/form_blur.png') no-repeat 100% 100%;
+  background-size: cover;
+  margin-top: 44px;
+}
+.form__title {
+  display: inline-block;
+  position: relative;
+}
+.input {
+  display: block;
+  width: 340px;
+  margin: 0 18px 20px 18px;
+  padding: 18px;
+  border-style: none;
+  border-radius: 5px;
+
+}
+.textarea__message {
+  min-height: 140px;
+}
+
+.form__buttons {
+  display: flex;
+}
+.form__button-item {
+  padding: 14px 32px;
+  background-color: rgba($accent-color, .85);
+  color: #fff;
+  text-decoration: none;
+  width: 50%;
+  border-style: none;
+  border-right: 1px solid #fff;
+  &:last-child {
+    border: none;
+  }
+  &:hover {
+    background-color: #009688;
+  }
+}

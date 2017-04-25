@@ -1,0 +1,45 @@
+.button {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  color: #fff;
+  background-color: transparent;
+  padding: 14px 28px;
+  display: inline-block;
+  text-decoration: none;
+}
+.button-action-auth {
+  position: absolute;
+  top: 24px;
+  right: 100px;
+  
+  &:hover {
+    background-color: #fff;
+    color: $accent-color;
+  }
+}
+
+.works__link_button {
+  position: relative;
+  padding: 14px 32px 14px 50px;
+  background-color: rgba(0, 191, 165, 0.85);
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  margin: 42px 0;
+  border-radius: 4px;
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+    background: url(../img/icons/link.svg) no-repeat center center;
+    background-size: contain;
+    height: 22px;
+    width: 22px; 
+  }
+  &:hover {
+    background-color: #009688;
+  }
+}

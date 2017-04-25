@@ -1,0 +1,43 @@
+.section__feedback {
+  background-image: url('../img/reviews.jpg'), url('../img/blur_bg.svg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center, center center;
+  background-size: cover, cover;
+  position: relative;
+  min-height: 100vh;
+}
+.feedback__list {
+  text-align: center;
+  margin-bottom: 70px
+}
+.feedback__item {
+  display: inline-block;
+  max-width: 390px;
+  vertical-align: top;
+  text-align: left;
+}
+.feedback__text {
+  padding: 20px 12px;
+}
+.reviewer__feedback {
+  margin-left: 12px;
+}
+.feedback__pic {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  overflow: hidden;
+  float: left;
+  margin-right: 20px;
+}
+.feedback__pic_left,
+.feedback__pic_right {
+  width: 78px;
+}
+.feedback__reviewer {
+  color: $accent-color;
+  padding-top: 20px;
+}
+.feedback__name {
+  font-family: 'robotobold';
+}

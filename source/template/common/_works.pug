@@ -12,10 +12,11 @@ mixin svg(addClass, addId)
       .slider.works__slider
         .works__slider_left
           .works__block
-            .title.works__title.subtitle
-              | Сайт школы онлайн образования
+            .title.works__title_h3.subtitle
+              | Сайт школы онлайн<br> образования
             .works__text
               | html, css, javascript
+            a.works__link_button(href="#") Посмотреть сайт
         .works__slider_right
           .slider__image_big
             img.slider_pic(src='assets/img/slider/work-1.png', alt='work-1')
@@ -32,45 +33,60 @@ mixin svg(addClass, addId)
                 a.arrow-scroll__arrow.arrow-scroll__link_works(href='#')
                   +svg('arrow-scroll__arrow_works arrow-scroll__arrow_works_up','arrow_down')
   
+    .title.works__title.feedback__title
+        | Что обо мне<br> говорят 
     section.section.section__full-screen.section__feedback      
-      .title.feedback__title
-        | Что обо мне говорят 
-      .feedback__section
-        .feedback__block_left
+      ul.feedback__list
+        li.feedback__item
           .feedback__text
             p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-          
-          .feedback__pic
-          
-          .feedback__name
-            | Ковальчук Дмитрий
-          .feedback__pos
-            | основатель Loftschool
-
-        .feedback__block_right
+          .reviever.reviewer__feedback
+            .feedback__pic
+              img.feedback__pic_left(src="assets/img/koval.jpg", alt="photo")
+            .feedback__reviewer
+              .feedback__name
+                | Ковальчук Дмитрий
+              .feedback__pos
+                | основатель Loftschool
+        li.feedback__item
           .feedback__text
             p Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
-          .feedback__pic
-          
-          .feedback__name
-            | Сабанцев Владимир
-          .feedback__pos
-            | преподаватель
-        form.feedback__form
-          .title.form__title.subtitle
-          | Связаться со мной
-          input(type='text' placeholder='Имя')
-          input(type='email' placeholder='E-mail')
-          textarea(placeholder='Ваше сообщение')
-          input(type='submit' value='Отправить')
-          input(type='reset' value='Очистить')
+          .reviever.reviewer__feedback
+            .feedback__pic
+              img.feedback__pic_right(src="assets/img/sabantsev.jpg", alt="photo")
+            .feedback__reviewer
+              .feedback__name
+                | Сабанцев Владимир
+              .feedback__pos
+                | преподаватель
+      
+      .form__block
+        .title.subtitle
+          .form__title
+            | Связаться со мной
+        form.form__feedback
+          .inputs__block
+            input.input.input__name(type='text' placeholder='Имя')
+            input.input.input__email(type='email' placeholder='E-mail')
+            textarea.input.textarea__message(placeholder='Ваше сообщение')
+          .form__buttons
+            input.input__send.form__button-item(type='submit' value='Отправить')
+            input.input__reset.form__button-item(type='reset' value='Очистить')
+        a.arrow-scroll__arrow.arrow-scroll__up(href='#')
+          +svg('arrow__up','portf_arrow_up')
+        
       footer.footer.footer_position_absolute
         .footer_row_top
           nav.navigation.navigation_location_footer
             ul.navigation_location_footer__list
-              each item in ['Мои работы', 'Обо мне', 'Блог', 'Авторизация']
-                li.navigation_location_footer__item
-                  a(href='#' class='navigation_location_footer__link')= item
+              li.navigation_location_footer__item
+                a(href='works.html' class='navigation_location_footer__link') Мои работы
+              li.navigation_location_footer__item
+                a(href='about.html' class='navigation_location_footer__link') Обо мне
+              li.navigation_location_footer__item
+                a(href='blog.html' class='navigation_location_footer__link') Блог
+              li.navigation_location_footer__item
+                a(href='#' class='navigation_location_footer__link') Авторизация
           
           .footer__socials.socials
             ul.socials__list.socials__list_footer
@@ -83,7 +99,7 @@ mixin svg(addClass, addId)
               li.socials__item.socials__item_footer
                 a(href='#' class=`socials__link socials__link_footer socials__link_in`)
                   +svg('socials__icon socials__icon_footer','in_round')
-        
+    
         .footer_row_bottom
           .footer__text.footer__text_left
             .footer__text_about

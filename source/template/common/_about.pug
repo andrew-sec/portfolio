@@ -9,7 +9,7 @@ mixin svg(addClass, addId)
     section(class='section section__about')
       .about.about_column_left
         .about__title_transparent
-          img.title_pic-transparent(src="assets/img/about_header_left_bg.png", alt="about-bg")
+          img.title_pic-transparent(src='assets/img/about_header_bg.png', alt='about-bg')
         .title.about__title
           .h1 Обо мне
         .about-user
@@ -127,9 +127,14 @@ mixin svg(addClass, addId)
         .footer_row_top
           nav.navigation.navigation_location_footer
             ul.navigation_location_footer__list
-              each item in ['Мои работы', 'Обо мне', 'Блог', 'Авторизация']
-                li.navigation_location_footer__item
-                  a(href='#' class='navigation_location_footer__link')= item
+              li.navigation_location_footer__item
+                a(href='works.html' class='navigation_location_footer__link') Мои работы
+              li.navigation_location_footer__item
+                a(href='about.html' class='navigation_location_footer__link') Обо мне
+              li.navigation_location_footer__item
+                a(href='blog.html' class='navigation_location_footer__link') Блог
+              li.navigation_location_footer__item
+                a(href='#' class='navigation_location_footer__link') Авторизация
           
           .footer__socials.socials
             ul.socials__list.socials__list_footer
