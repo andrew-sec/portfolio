@@ -3,34 +3,32 @@ mixin svg(addClass, addId)
     use(xlink:href=`assets/img/sprite/sprite.svg#${addId}`)
 
 header.header
-  .header__socials.socials
+  .header__top-line
     ul.socials__list
       li.socials__item.socials__item_header
-        a(href='#' class=`socials__link socials__link_vk`)
+        a.socials__link_header(href='#')
           +svg('socials__icon socials__icon_header','vk')
       li.socials__item.socials__item_header
-        a(href='#' class=`socials__link socials__link_git`)
+        a.socials__link_header(href='#')
           +svg('socials__icon socials__icon_header','github')
       li.socials__item.socials__item_header
-        a(href='#' class=`socials__link socials__link_in`)
+        a.socials__link_header(href='#')
           +svg('socials__icon socials__icon_header','in')
-  
-  .header__hamburger-menu.hamburger-menu
-    img.hamburger-menu__icon(src="assets/img/icons/hamburger.svg", alt="hamburger icon")
+    
+    +svg('hamburger-menu__icon','hamburger')
   
   .header__title_transparent
     img(src="assets/img/portfolio_header_bg.png", alt="portfolio header")
 
-  .header__login-box.login-box
+  .login-box.login-box__bg_transparent
     .login-box__pic
       img.login-box__pic-elem(src='assets/img/user.jpg', alt='user-photo')
-    .login-box__name.login-box__name_header
+    span.login-box__title_35px
       | Андрей Секачев
-    .login-box__descr.login-box__descr_header
-      | Личный сайт веб разработчика 
-  .header__arrow-scroll.arrow-scroll
-    a.arrow-scroll__arrow.arrow-scroll__link_header(href='#')
-      +svg('arrow-scroll__arrow_header','arrow_down')
-  svg(class='triangles' xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 100', preserveAspectRatio='none')
-    polygon(class='triangles__left triangles__left_white' points='0,0 0,100 500,100 500,90')
-    polygon(class='triangles__right triangles__right_white' points='1000,0   1000,100   500,100   500,90')
+    span.login-box__subtitle_header
+      | Личный сайт веб разработчика
+  a.arrow-scroll__down(href='#')
+    +svg('arrow-scroll__arrow_header','arrow_down')
+  svg(class='triangles triangles_pos_absolute' xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 100', preserveAspectRatio='none')
+    polygon(class='triangles_fill_white' points='0,0 0,100 500,100 500,90')
+    polygon(class='triangles_fill_white' points='1000,0   1000,100   500,100   500,90')

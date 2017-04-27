@@ -2,8 +2,11 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.map__contacts.contacts {
+.map__contacts {
   background-color: rgba(#fff, .85);
 }
 

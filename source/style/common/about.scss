@@ -2,29 +2,27 @@
   display: flex;
 }
 .about_column_left, .about_column_right {
-  // flex-grow: 1;
-  flex-basis: 50%;
+  width: 50%;
   background-color: $grey;
 }
 .about_column_left {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
 }
 .about_column_right {
   background-color: $beige;
 }
-.about__title, .about-user{
-  // flex-grow: 1;
-  flex-basis: 50%;
+.about__title_width_50 {
+ width: 50%;
+ text-align: center;
 }
-.about-user {
+.about__user {
+  width: 50%;
   margin-right: 22px;
 }
-.about-user__image {
+.about__user-image {
   text-align: right;
 }
-.about-user__pic {
+.about__user-pic {
   width: 100%;
   height: auto;
   max-width: $max-image-size;
@@ -38,10 +36,12 @@
 }
 .contacts__list {
   text-align: left;
-  padding: 18px 72px 20px 42px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
 }
 .contacts__item {
-  margin: 10px 0 28px;
+  margin-bottom: 28px;
   &:last-child {
     margin-bottom: 0;
   }

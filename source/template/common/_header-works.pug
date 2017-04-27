@@ -2,8 +2,8 @@ mixin svg(addClass, addId)
   svg(class=addClass)
     use(xlink:href=`assets/img/sprite/sprite.svg#${addId}`)
 
-header.header.blog__header
-  .header__top-line.header__top-line_width_80
+header.header
+  .header__top-line
     ul.socials__list
       li.socials__item.socials__item_header
         a.socials__link_header(href='#')
@@ -18,15 +18,17 @@ header.header.blog__header
     +svg('hamburger-menu__icon','hamburger')
   
   .header__title_transparent
-    img(src="assets/img/blog_header.png", alt="blog header")
+    img(src="assets/img/portfolio_header_bg.png", alt="portfolio header")
 
   .login-box.login-box__bg_transparent
     .login-box__pic
       img.login-box__pic-elem(src='assets/img/user.jpg', alt='user-photo')
-    .title.title_font_63px.title__blog_header
-      span.title__text_white Блог
+    span.login-box__title_35px
+      | Андрей Секачев
     span.login-box__subtitle_header
       | Личный сайт веб разработчика
-  svg(class='triangles' xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 100', preserveAspectRatio='none')
-    polygon(class='triangles_fill_white' points='0,0 0,100 500,100 500,90')
-    polygon(class='triangles_fill_white' points='1000,0   1000,100   500,100   500,90')
+  a.arrow-scroll__down(href='#')
+    +svg('arrow-scroll__arrow_header','arrow_down')
+  svg(class='triangles triangles_pos_absolute' xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 100', preserveAspectRatio='none')
+    polygon(class='triangles_fill_grey' points='0,0 0,100 500,100 500,90')
+    polygon(class='triangles_fill_beige' points='1000,0   1000,100   500,100   500,90')

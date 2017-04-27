@@ -11,6 +11,7 @@
 *.swp
 *.vi
 *~
+*.todo
 
 # OS or Editor folders
 *.sublime-grunt.cache

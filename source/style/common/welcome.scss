@@ -1,34 +1,42 @@
 .section-welcome {
+  background:url('assets/img/main-bg.jpg') no-repeat center center;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .login-box__welcome {
   background-color: rgba(#fff, .85);
 }
-.login-box__name_welcome {
-  font-size: 28px;
+.login-box__subtitle{
+  margin-bottom: 36px;
 }
-.socials__item_welcome {
-  padding: 40px 12px;
+.socials__list_margin-b_36px {
+  margin-bottom: 36px;
 }
-.socials__link:hover .socials__icon_welcome {
+.socials__item {
+  margin-left: 30px;
+  &:first-child {
+    margin-left: 0;
+  }
+}
+.socials__link:hover .socials__icon_color_cyan {
   fill: $accent-color;
 }
-.socials__icon_welcome {
+.socials__icon_color_cyan {
   fill: rgba($accent-color, .5);
 }
-.navigation_location_welcome__list {
+.navigation__list {
   display: flex; 
   justify-content: space-between;
 }
-.navigation_location_welcome__item {
+.navigation__item {
   border-right: 1px solid #fff;
   &:last-child{
     border: none;
   }
 }
-.navigation_location_welcome__link {
+.navigation__link {
   padding: 14px 32px;
   background-color: rgba($accent-color, .85);
   display: block;
@@ -38,14 +46,14 @@
     background-color: #009688;
   }
 }
-.footer__welcome {
+.welcome__footer {
   position: absolute;
   bottom: 40px;
   left: 0;
   width: 100%;
   text-align: center;
 }
- .footer__text_welcome {
+ .footer__copyright {
    color: #fff;
    font-family: 'robotolight'; 
  }

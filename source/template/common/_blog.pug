@@ -5,9 +5,9 @@ mixin svg(addClass, addId)
 .wrapper
   .maincontent
     include _blog_header
-    section.section.section__blog
-      aside.blog__aside
-        nav.nav.nav__blog
+    section.section__blog
+      aside.aside.aside_width_20
+        nav.nav__blog
           ul.aside__list
             li.aside__item
               a.aside__link(href="#") Самое важное в Sass
@@ -17,20 +17,20 @@ mixin svg(addClass, addId)
               a.aside__link(href="#") Самый необходимый набор Gulp плагинов
             li.aside__item
               a.aside__link(href="#") Почему я выбрал Jade
-      section.section__content
-        article.article.article__blog
-          .title.subtitle.article__title
+      section.section__content_width_60
+        article.article__blog
+          .title.subtitle_font_35px
             | Самое важное в Sass
           .article__date
             time.article__time(datetime='2016-11-22') 22 ноября 2016
           p Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.
           p Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
-          .article__code-pic
-            img(src="assets/img/code.jpg", alt="code")
+          .article__code
+            img.article__code_image(src="assets/img/code.jpg", alt="code")
 
 
-        article.article.article__blog
-          .title.subtitle.article__title
+        article.article__blog
+          .title.subtitle_font_35px
             | Приёмы в вёрстке, без которых не обходится ни один сайт
           .article__date
             time.article__time(datetime='2016-11-13') 13 ноября 2016
@@ -38,35 +38,33 @@ mixin svg(addClass, addId)
           p Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
       
     
-    footer.footer.footer_blog
-      .footer_row_top
-        nav.navigation.navigation_location_footer
-          ul.navigation_location_footer__list
-            li.navigation_location_footer__item
-              a(href='works.html' class='navigation_location_footer__link') Мои работы
-            li.navigation_location_footer__item
-              a(href='about.html' class='navigation_location_footer__link') Обо мне
-            li.navigation_location_footer__item
-              a(href='blog.html' class='navigation_location_footer__link') Блог
-            li.navigation_location_footer__item
-              a(href='#' class='navigation_location_footer__link') Авторизация
+    footer.footer__blog
+      .footer__row
+        nav.footer__nav
+          ul.footer__list
+            li.footer__item
+              a(href='works.html' class='footer__link') Мои работы
+            li.footer__item
+              a(href='about.html' class='footer__link') Обо мне
+            li.footer__item
+              a(href='blog.html' class='footer__link') Блог
+            li.footer__item
+              a(href='#' class='footer__link') Авторизация
         
-        .footer__socials.socials
-          ul.socials__list.socials__list_footer
-            li.socials__item.socials__item_footer
+        .footer__socials.social-view-circle
+          ul.socials__list.socials__list_margin_0
+            li.socials__item
               a(href='#' class=`socials__link socials__link_footer socials__link_vk`)
                 +svg('socials__icon socials__icon_footer','vk_round')
-            li.socials__item.socials__item_footer
+            li.socials__item
               a(href='#' class=`socials__link socials__link_footer socials__link_git`)
                 +svg('socials__icon socials__icon_footer','github_round')
-            li.socials__item.socials__item_footer
+            li.socials__item
               a(href='#' class=`socials__link socials__link_footer socials__link_in`)
                 +svg('socials__icon socials__icon_footer','in_round')
-  
-      .footer_row_bottom
-        .footer__text.footer__text_left
-          .footer__text_about
-            | Я веб-разработчик из Киева, и этот сайт я сделал в рамках<br> обучения в Школе онлайн образования LoftSchool. 
-        .footer__text.footer__text_right
-          .copyright 
-            | © Андрей Секачев | создано с любовью в LoftSchool
+      
+      .footer__row
+        span.footer__text
+          | Я веб-разработчик из Киева, и этот сайт я сделал в рамках<br> обучения в Школе онлайн образования LoftSchool. 
+        span.footer__text.footer__text_copyright
+          | © Андрей Секачев | создано с любовью в LoftSchool

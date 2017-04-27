@@ -1,14 +1,11 @@
 //header section
-.arrow-scroll__link_header {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  left: 50%;
-  bottom: 90px;
-  transform: translateX(-50%);
+.arrow-scroll__down {
+  width: 35px;
+  height: 35px;
   z-index: 100;
+  align-self: center;
+  margin-bottom: 30px;
 }
-
 .arrow-scroll__arrow_header,
 .arrow-scroll__arrow_works,
 .arrow__up {
@@ -32,12 +29,9 @@
   transform: rotate(180deg);
   transform-origin: 25% 50%;
 }
+//works-section
 .arrow-scroll__up {
-  display: inline-block;
   width: 26px;
   height: 18px;
-  position: absolute;
-  left: 50%;
-  bottom: 210px;
-  transform: translateX(-50%);
+  margin-bottom: 210px;
 }
