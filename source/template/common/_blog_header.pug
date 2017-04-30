@@ -2,17 +2,17 @@ mixin svg(addClass, addId)
   svg(class=addClass)
     use(xlink:href=`assets/img/sprite/sprite.svg#${addId}`)
 
-header.header.blog__header
+header.header.header_blog
   .header__top-line.header__top-line_width_80
-    ul.socials__list
-      li.socials__item.socials__item_header
-        a.socials__link_header(href='#')
+    ul.socials.text_color_rgba-white
+      li.socials__item.social__item_header
+        a.socials__link.socials__link_header(href='#')
           +svg('socials__icon socials__icon_header','vk')
-      li.socials__item.socials__item_header
-        a.socials__link_header(href='#')
+      li.socials__item.social__item_header
+        a.socials__link.socials__link_header(href='#')
           +svg('socials__icon socials__icon_header','github')
-      li.socials__item.socials__item_header
-        a.socials__link_header(href='#')
+      li.socials__item.social__item_header
+        a.socials__link.socials__link_header(href='#')
           +svg('socials__icon socials__icon_header','in')
     
     +svg('hamburger-menu__icon','hamburger')
@@ -23,7 +23,7 @@ header.header.blog__header
   .login-box.login-box__bg_transparent
     .login-box__pic
       img.login-box__pic-elem(src='assets/img/user.jpg', alt='user-photo')
-    .title.title_font_63px.title__blog_header
+    .title.text_font_63.text_color_white
       span.title__text_white Блог
     span.login-box__subtitle_header
       | Личный сайт веб разработчика

@@ -5,7 +5,7 @@ mixin svg(addClass, addId)
 .wrapper
   .maincontent
     include _blog_header
-    section.section__blog
+    section.section_blog
       aside.aside.aside_width_20
         nav.nav__blog
           ul.aside__list
@@ -19,7 +19,7 @@ mixin svg(addClass, addId)
               a.aside__link(href="#") Почему я выбрал Jade
       section.section__content_width_60
         article.article__blog
-          .title.subtitle_font_35px
+          .title.text_font_35
             | Самое важное в Sass
           .article__date
             time.article__time(datetime='2016-11-22') 22 ноября 2016
@@ -30,7 +30,7 @@ mixin svg(addClass, addId)
 
 
         article.article__blog
-          .title.subtitle_font_35px
+          .title.text_font_35
             | Приёмы в вёрстке, без которых не обходится ни один сайт
           .article__date
             time.article__time(datetime='2016-11-13') 13 ноября 2016
@@ -38,7 +38,7 @@ mixin svg(addClass, addId)
           p Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
       
     
-    footer.footer__blog
+    footer.footer_blog
       .footer__row
         nav.footer__nav
           ul.footer__list
@@ -51,16 +51,16 @@ mixin svg(addClass, addId)
             li.footer__item
               a(href='#' class='footer__link') Авторизация
         
-        .footer__socials.social-view-circle
-          ul.socials__list.socials__list_margin_0
+        .footer__socials
+          ul.socials.social_view_circle
             li.socials__item
-              a(href='#' class=`socials__link socials__link_footer socials__link_vk`)
+              a(href='#' class=`socials__link socials__link_footer`)
                 +svg('socials__icon socials__icon_footer','vk_round')
             li.socials__item
-              a(href='#' class=`socials__link socials__link_footer socials__link_git`)
+              a(href='#' class=`socials__link socials__link_footer`)
                 +svg('socials__icon socials__icon_footer','github_round')
             li.socials__item
-              a(href='#' class=`socials__link socials__link_footer socials__link_in`)
+              a(href='#' class=`socials__link socials__link_footer`)
                 +svg('socials__icon socials__icon_footer','in_round')
       
       .footer__row

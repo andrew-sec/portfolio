@@ -4,47 +4,45 @@ mixin svg(addClass, addId)
     
 .wrapper
   .maincontent
-    include _header-works
+    include _header
 
-    section(class='section section__about')
-      .about.about_column_left
-        .about__title_transparent
-          img.about__pic-transparent(src='assets/img/about_header_bg.png', alt='about-bg')
-        .about__title_width_50
-          .title.title_font_63px.title_align_center
+    section.section.section_about
+      .about-descr.block_width_50
+        .about-descr__title.flex_width_50
+          .title.text_font_63.text_align_center.flex_width_50
             span.title__text Обо мне
-        .about__user
-          .about__user-image
-            img(class='about__user_pic' src='assets/img/user-pic.jpg', alt='user-pic')
-          .title.subtitle_font_35px.title_align_center
+        .user
+          .user__image.flex_width_50
+            img.about__user_pic(src='assets/img/user-pic.jpg', alt='user-pic')
+          .title.text_font_35.text_align_center
             span.title__text Кто я
-          .about-user__text
+          .user__text
             p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
             p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-      .about.about_column_right
-        .title.subtitle_font_35px.title_align_center
+      .about__skills.block_width_50
+        .title.text_font_35.text_align_center
           span.title__text Чем я могу быть<br> вам полезен
-        .about-user-info__text
+        .about__text
           p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
-        .about-info__content
+        .about__content
           ul.skills
             li.skills__item
               .skill-section
                 .skill-section__title Frontend
-                  ul.skill-section__list
-                    li.skills-section__item
+                  ul.circles
+                    li.circles__item
                       .skill
                         svg.skill__circle(viewbox='0 0 110 110')
                           circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
                           circle.skill__circle_second.circle-90(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
                         span.skill__name HTML5
-                    li.skills-section__item
+                    li.circles__item
                       .skill
                         svg.skill__circle(viewbox='0 0 110 110')
                           circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
                           circle.skill__circle_second.circle-85(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
                         span.skill__name CSS3
-                    li.skills-section__item
+                    li.circles__item
                       .skill
                         svg.skill__circle(viewbox='0 0 110 110')
                           circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
@@ -54,26 +52,26 @@ mixin svg(addClass, addId)
             li.skills__item
               .skill-section
                 .skill-section__title Backend
-                  ul.skill-section__list
-                    li.skills-section__item
+                  ul.circles
+                    li.circles__item
                       .skill
                         svg.skill__circle(viewbox='0 0 110 110')
                           circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
                           circle.skill__circle_second.circle-90(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
                         span.skill__name PHP
-                    li.skills-section__item
+                    li.circles__item
                       .skill
                         svg.skill__circle(viewbox='0 0 110 110')
                           circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
                           circle.skill__circle_second.circle-85(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
                         span.skill__name MySQL
-                    li.skills-section__item
+                    li.circles__item
                       .skill
                         svg.skill__circle(viewbox='0 0 110 110')
                           circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
                           circle.skill__circle_second.circle-85(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
                         span.skill__name Node.js<br>&npm
-                    li.skills-section__item
+                    li.circles__item
                       .skill
                         svg.skill__circle(viewbox='0 0 110 110')
                           circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
@@ -83,31 +81,31 @@ mixin svg(addClass, addId)
             li.skills__item
               .skill-section
                 .skill-section__title Workflow
-                  ul.skill-section__list
-                    li.skills-section__item
+                  ul.circles
+                    li.circles__item
                       .skill
                         svg.skill__circle(viewbox='0 0 110 110')
                           circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
                           circle.skill__circle_second.circle-90(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
                         span.skill__name Git
-                    li.skills-section__item
+                    li.circles__item
                       .skill
                         svg.skill__circle(viewbox='0 0 110 110')
                           circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
                           circle.skill__circle_second.circle-85(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
                         span.skill__name Gulp
-                    li.skills-section__item
+                    li.circles__item
                       .skill
                         svg.skill__circle(viewbox='0 0 110 110')
                           circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
                           circle.skill__circle_second.circle-85(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
                         span.skill__name Bower
     
-    section.section.section__full-screen.section__map(style='background-image:url(assets/img/map.jpg)')
+    section.section.section_height_100vh.section__map(style='background-image:url(assets/img/map.jpg)')
       .map__contacts.login-box
-        .title.subtitle_font_35px 
+        .title.text_font_35
           span.title__text Контакты
-        ul.contacts__list
+        ul.contacts
           li.contacts__item
             +svg('contacts__icon','skype_n')
             span.contacts__text skype_kdn
@@ -134,16 +132,16 @@ mixin svg(addClass, addId)
               li.footer__item
                 a(href='#' class='footer__link') Авторизация
           
-          .footer__socials.social-view-circle
-            ul.socials__list.socials__list_margin_0
+          .footer__socials
+            ul.socials.social_view_circle
               li.socials__item
-                a(href='#' class=`socials__link socials__link_footer socials__link_vk`)
+                a(href='#' class=`socials__link socials__link_footer`)
                   +svg('socials__icon socials__icon_footer','vk_round')
               li.socials__item
-                a(href='#' class=`socials__link socials__link_footer socials__link_git`)
+                a(href='#' class=`socials__link socials__link_footer`)
                   +svg('socials__icon socials__icon_footer','github_round')
               li.socials__item
-                a(href='#' class=`socials__link socials__link_footer socials__link_in`)
+                a(href='#' class=`socials__link socials__link_footer`)
                   +svg('socials__icon socials__icon_footer','in_round')
         
         .footer__row

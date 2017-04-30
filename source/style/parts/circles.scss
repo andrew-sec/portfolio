@@ -13,12 +13,16 @@
   stroke-dasharray: .0010 282.6;
   transition: all 1s;
 }
-.skills-section__item {
-  display: inline-block;
+.circles {
+  display: flex;
+}
+.circles__item {
   width: 120px;
   height: 120px;
-  margin-left: 40px;
   text-align: center;
+}
+.circles__item + .circles__item {
+  margin-left: 40px;
 }
 .skill__circle:hover .circle-0 {
    stroke-dasharray: .001 282.6;
@@ -82,11 +86,6 @@
 }
 .skill-section__title {
   font-size: 28px;
-  margin-left: 40px;
-}
-.skill-section__list {
-  padding-bottom: 20px;
-  padding-top: 10px;
 }
 .skill {
   position: relative;

@@ -1,5 +1,5 @@
 //Vars
-$container-width: 1200px;
+$container-width: 960px;
 $max-image-size: 443px;
 $main-color: #455a64;
 $accent-color: #00bfa5;
@@ -8,6 +8,8 @@ $blog-overlay: rgba(#016672, .3);
 $grey : #efeee9;
 $beige: #eeebdf;
 $main-font-color : #373e42;
+
+//layout
 * {
 	box-sizing: border-box;
 }
@@ -34,11 +36,11 @@ body {
 .header, .section {
 	position: relative;
 	background-size: cover;
-	min-width: $container-width;
 }
-.section__full-screen {
+.section_height_100vh {
 	height: 100vh;
 	min-height: 650px;
+	position: relative;
 }
 ul {
 	padding: 0;
@@ -59,7 +61,4 @@ img {
 }
 textarea {
   resize: vertical;
-}
-.footer {
-	min-width: $container-width;
 }

@@ -4,34 +4,37 @@ mixin svg(addClass, addId)
 
 .wrapper
   .maincontent
-    section(class="section section__full-screen section-welcome" style='background-image:url(assets/img/main-bg.jpg);')
-      button.button.welcome__button
-        span.button__text Авторизоваться
+    section.welcome.section_height_100vh
+      button.button.button_pos_absolute
+        span.text_color_accent.text_color_white Авторизоваться
       .login-box.login-box__welcome
         .login-box__pic
           img.login-box__pic-elem(src='assets/img/user.jpg', alt='user-photo')
-        span.login-box__title.login-box__title_28px
+        span.login-box__title.text_size_28
           | Андрей Секачев
         span.login-box__subtitle
           | Личный сайт веб разработчика
-        ul.socials__list.socials__list_margin-b_36px
-          li.socials__item
+        ul.socials.login-box__socials.socials_color_cyan
+          li.socials__item.social__item_welcome
             a(href='#' class=`socials__link`)
-              +svg('socials__icon socials__icon_color_cyan','vk')
-          li.socials__item
+              +svg('socials__icon','vk')
+          li.socials__item.social__item_welcome
             a(href='#' class=`socials__link`)
-              +svg('socials__icon socials__icon_color_cyan','github')
-          li.socials__item
+              +svg('socials__icon','github')
+          li.socials__item.social__item_welcome
             a(href='#' class=`socials__link`)
-              +svg('socials__icon socials__icon_color_cyan','in')
+              +svg('socials__icon','in')
         nav.navigation
           ul.navigation__list
             li.navigation__item
-              a(href=`works.html` class='navigation__link') Мои работы
+              a(href=`works.html` class='navigation__link')
+                span.text_color_white Мои работы
             li.navigation__item
-              a(href=`about.html` class='navigation__link') Обо мне
+              a(href=`about.html` class='navigation__link')
+                span.text_color_white Обо мне
             li.navigation__item
-              a(href=`blog.html` class='navigation__link') Блог
-    footer.footer.welcome__footer
-      span.footer__copyright © Андрей Секачев | создано с любовью в LoftSchool       
+              a(href=`blog.html` class='navigation__link')
+                span.text_color_white Блог
+      footer.footer.welcome__footer
+        span.footer__copyright © Андрей Секачев | создано с любовью в LoftSchool       
       

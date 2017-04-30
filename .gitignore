@@ -38,3 +38,7 @@ build
 # Node.JS
 node_modules
 npm-debug.log
+
+# slider tests
+_test-slider.pug
+test-slider.scss

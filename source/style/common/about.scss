@@ -1,44 +1,30 @@
-.section__about {
+.section_about {
   display: flex;
 }
-.about_column_left, .about_column_right {
-  width: 50%;
+.about-descr {
+  display: flex;
   background-color: $grey;
+  padding: 0 20px;
 }
-.about_column_left {
-  display: flex;
+.about-descr__title {
+  margin-right: 30px;
+  background: url('../img/about_header_bg.png') no-repeat center top;
+  background-size: contain;
 }
-.about_column_right {
+.about__skills {
   background-color: $beige;
+  padding: 0 20px 0 40px;
 }
-.about__title_width_50 {
- width: 50%;
- text-align: center;
+.about__descr .title__text {
+  align-self: flex-start;
 }
-.about__user {
-  width: 50%;
-  margin-right: 22px;
+.about__user_pic {
+  max-width: 100%;
 }
-.about__user-image {
-  text-align: right;
-}
-.about__user-pic {
-  width: 100%;
-  height: auto;
-  max-width: $max-image-size;
-}
-.about-user__text {
-  padding-right: 22px;
-}
-.title_pic-transparent {
-  width: 360px;
-  height: auto;
-}
-.contacts__list {
-  text-align: left;
-  padding: 30px;
+.contacts {
   display: flex;
   flex-direction: column;
+  padding: 0 70px 40px 30px;
 }
 .contacts__item {
   margin-bottom: 28px;
@@ -46,13 +32,12 @@
     margin-bottom: 0;
   }
 }
-.contacts__icon, .contacts__text {
-  display: inline-block;
-  vertical-align: middle;
+.contacts_color_cyan .contacts__icon {
+  fill: rgba($accent-color, .5);
 }
-.contacts__icon {
-  margin-right: 10px;
+.contacts__item {
+  display: flex;
 }
-.about-user-info__text {
-  padding: 0 30px 0 38px;
+.contacts__text {
+  margin-left: 10px;
 }

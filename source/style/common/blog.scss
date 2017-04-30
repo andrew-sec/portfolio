@@ -2,7 +2,7 @@
   background: url('../img/blog_header.png') no-repeat center center;
   background-size: cover;
 }
-.header.blog__header {
+.header.header_blog {
   height: 496px;
   background-position: 0 0;
   padding: 28px 0 0 0;
@@ -17,7 +17,7 @@
     background-color: rgba(#016672, .3);
   }
 }
-.section__blog {
+.section_blog {
   display: flex;
   justify-content: center;
   margin-bottom: 70px;

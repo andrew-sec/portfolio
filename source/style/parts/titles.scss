@@ -2,26 +2,9 @@
   font-family: 'bernier_regularregular';
   color: $main-color;
 }
-.title_align_center {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-.title_font_63px {
-  font-size: 63px;
-}
-.title__text_line-height_184px {
-  line-height: 184px;
-}
-.title__mb_15px {
-  margin-bottom: 15px;
-}
 .subtitle {
   display: flex;
   justify-content: center;
-}
-.subtitle_font_35px {
-  font-size: 35px;
 }
 .title__text, .title__text_white {
   position: relative;

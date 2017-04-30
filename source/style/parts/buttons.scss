@@ -5,25 +5,23 @@
   background-color: transparent;
   &:hover {
     background-color: #fff;
-    .button__text {
-      color: $accent-color;
-    }
   }
 }
-.button__text {
-  color: #fff;
+.button:hover .text_color_accent {
+  color: $accent-color;
 }
-.welcome__button {
+.button_pos_absolute {
   position: absolute;
   top: 24px;
   right: 100px;
 }
-.button__link {
+.button_link {
   position: relative;
-    padding: 14px 32px 14px 50px;
-    background-color: rgba(0, 191, 165, 0.85);
-    border-radius: 4px;
-    text-decoration: none;
+  padding: 14px 32px 14px 50px;
+  background-color: rgba(0, 191, 165, 0.85);
+  border-radius: 4px;
+  text-decoration: none;
+  align-self: center;
   &::before {
     content: '';
     position: absolute;

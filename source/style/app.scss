@@ -1,7 +1,7 @@
 //Layout
 @import 'layout/adjustments';
 @import 'fonts/fonts';
-@import 'layout/normalize';
+// @import 'layout/normalize';
 
 //Style Parts
 @import 'parts/social-icons';
@@ -12,6 +12,8 @@
 @import 'parts/circles';
 @import 'parts/buttons';
 @import 'parts/form';
+@import 'parts/text';
+@import 'parts/layout';
 
 //Common (sections)
 @import 'common/**/*.scss';

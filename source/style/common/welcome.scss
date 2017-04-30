@@ -1,5 +1,5 @@
-.section-welcome {
-  background:url('assets/img/main-bg.jpg') no-repeat center center;
+.welcome {
+  background:url('../img/main-bg.jpg') no-repeat center center;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -11,7 +11,7 @@
 .login-box__subtitle{
   margin-bottom: 36px;
 }
-.socials__list_margin-b_36px {
+.login-box__socials {
   margin-bottom: 36px;
 }
 .socials__item {
@@ -20,10 +20,10 @@
     margin-left: 0;
   }
 }
-.socials__link:hover .socials__icon_color_cyan {
+.socials__item_welcome:hover .socials__icon {
   fill: $accent-color;
 }
-.socials__icon_color_cyan {
+.socials_color_cyan .socials__icon {
   fill: rgba($accent-color, .5);
 }
 .navigation__list {
@@ -40,7 +40,6 @@
   padding: 14px 32px;
   background-color: rgba($accent-color, .85);
   display: block;
-  color: #fff;
   text-decoration: none;
   &:hover {
     background-color: #009688;

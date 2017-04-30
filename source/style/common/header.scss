@@ -4,7 +4,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   height: 620px;
-  padding: 28px;
+  padding: 28px 28px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -26,11 +26,11 @@
   height: 26px;
   display: block;
 }
-.socials__link_header:hover .socials__icon_header {
+.social__item_header:hover .socials__icon_header {
   fill: #fff;
 }
-.socials__icon_header {
-  fill: rgba(#fff, .5);
+.text_color_rgba-white .socials__icon {
+  fill: rgba(#fff,.5);
 }
 .hamburger-menu__icon {
   fill: rgba(#fff, .5);
