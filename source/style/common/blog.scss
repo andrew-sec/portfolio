@@ -19,17 +19,16 @@
 }
 .section_blog {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   margin-bottom: 70px;
 }
 .aside {
-  margin-right: 120px;
-  &_width_20 {
-    flex-basis: 20%;
+  &_width_25 {
+    width: 25%;
   }
 }
-.section__content_width_60 {
-  flex-basis: 60%;
+.section__content_width_65 {
+  width: 65%;
 }
 .aside__list {
   text-align: right;
