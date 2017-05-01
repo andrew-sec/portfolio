@@ -1988,6 +1988,14 @@ gulp-pug@~3.2.0:
     pug ">=2.0.0-alpha <3"
     through2 "^2.0.0"
 
+gulp-px2rem@^1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/gulp-px2rem/-/gulp-px2rem-1.0.11.tgz#1341a03564f69263c53f2c94e6934e620ce4f607"
+  dependencies:
+    gulp-util "^3.0.8"
+    node-px2rem "^1.1.4"
+    through2 "^2.0.3"
+
 gulp-replace@~0.5.4:
   version "0.5.4"
   resolved "https://registry.yarnpkg.com/gulp-replace/-/gulp-replace-0.5.4.tgz#69a67914bbd13c562bff14f504a403796aa0daa9"
@@ -3432,6 +3440,13 @@ node-pre-gyp@^0.6.29:
     tar "^2.2.1"
     tar-pack "^3.4.0"
 
+node-px2rem@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/node-px2rem/-/node-px2rem-1.1.4.tgz#15ee08241bc974c1e7534d814c0be9a5ed3e9615"
+  dependencies:
+    extend "^3.0.0"
+    postcss "^5.1.0"
+
 node-sass@^4.2.0:
   version "4.5.2"
   resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-4.5.2.tgz#4012fa2bd129b1d6365117e88d9da0500d99da64"
@@ -3859,7 +3874,7 @@ postcss-value-parser@^3.2.3:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-3.3.0.tgz#87f38f9f18f774a4ab4c8a232f5c5ce8872a9d15"
 
-postcss@^5.0.4, postcss@^5.2.16:
+postcss@^5.0.4, postcss@^5.1.0, postcss@^5.2.16:
   version "5.2.17"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-5.2.17.tgz#cf4f597b864d65c8a492b2eabe9d706c879c388b"
   dependencies:

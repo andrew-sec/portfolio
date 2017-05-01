@@ -1,36 +1,60 @@
-.footer_position_absolute {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: rgba($main-color, .85);
+.footer {
+  &_position_absolute {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba($main-color, .85);
+  }
+  &_flex {
+    width: 100%;
+    background-color: rgba($main-color, .85);
+  }
 }
-.footer_blog {
-  width: 100%;
-  background-color: rgba($main-color, .85);
-}
-.footer_row_top, .footer_row_bottom {
+.footer__row {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid rgba(#fff, .1);
+  @include laptop {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
 }
-.navigation_location_footer__list {
+.footer__list {
   margin-left: 30px;
+  display: flex;
+  @include phone {
+    margin-left: 10px;
+  }
 }
-.navigation_location_footer__item {
-  display: inline-block;
+.footer__item {
   margin-right: 40px;
+  @include phone {
+    margin-right: 10px;
+  }
 }
-.navigation_location_footer__link {
+.footer__link {
   text-decoration: none;
   display: block;
   color: #fff;
   padding-top: 24px;
   padding-bottom: 24px;
+  @include phone {
+    padding-top: 30px;
+    padding-bottom: 18px;
+  }
 }
-.socials__list_footer {
+.footer__socials {
+  display: flex;
+  align-items: center;
+}
+.social_view_circle {
   margin-right: 30px;
-  margin-top: 14px;
+  @include laptop {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
 }
 .socials__item_footer {
   margin-left: 10px;
@@ -42,20 +66,28 @@
   height: 40px;
   width: 40px;
   display: block;
+  &:hover .socials__icon_footer {
+    fill: #fff;
+  }
 }
 .socials__icon_footer {
   fill: rgba(#fff,.50);
   width: 100%;
   height: 100%;
-  &:hover {
-    fill: #fff;
-  }
 }
-.footer__text_left, .footer__text_right {
+.footer__text {
   font-family: 'robotolight';
   color: rgba(#fff, .5);
-  padding: 14px 30px; 
+  padding: 14px 30px;
+  text-align: center;
+  @include laptop {
+    padding: 7px 0;
+    text-align: center;
+  }
 }
-.footer__text_right {
+.footer__text_copyright {
   padding-top: 24px;
+  @include laptop {
+    padding-top: 0;
+  }
 }

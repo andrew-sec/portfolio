@@ -1,54 +1,45 @@
 .header {
-  background-image:url('../img/main-bg.jpg');
+  background: url('../img/main-bg.jpg') no-repeat, center center;
   background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
   height: 620px;
+  padding: 28px 28px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.blog__header {
-  height: 396px;
-  &::before {
-    position: absolute;
-    content:" ";
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background-color: rgba(#016672, .3);
-  }
+.header__top-line {
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
 }
-.header__socials {
-  position: absolute;
-  top: 34px;
-  left: 30px;
+.header__top-line_width_80 {
+  width: 80%;
+  align-self: center;
 }
-.socials__item_header {
-  padding-right: 20px;
+.title_image_transparent {
+  max-width: 100%;
 }
-.socials__link:hover .socials__icon_header {
+.socials__list_header {
+  display: flex;
+}
+.socials__link_header {
+  width: 35px;
+  height: 26px;
+  display: block;
+}
+.social__item_header:hover .socials__icon_header {
   fill: #fff;
 }
-.socials__icon_header {
-  fill: rgba(#fff, .5);
+.text_color_rgba-white .socials__icon {
+  fill: rgba(#fff,.5);
 }
-.header__hamburger-menu {
-  position: absolute;
-  top: 28px;
-  right: 28px;
-  height: 36px;
+.hamburger-menu__icon {
+  fill: rgba(#fff, .5);
+  height: 35px;
   width: 40px;
   &:hover {
     cursor: pointer;
-  }
-}
-.hamburger-menu__bar {
-  display: block;
-  height: 5px;
-  background-color: #fff;
-  border-radius: 2px;
-  margin-bottom: 10px;
-  &:last-child {
-    margin-bottom: 0;
+    fill: #fff;
   }
 }
 .header__title_transparent {
@@ -57,16 +48,22 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.header__login-box {
-  background-color: transparent;
+.header .login-box__bg_transparent {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    z-index: 100;
 }
-.login-box__name_header, .login-box__descr_header {
+.login-box__title_35px {
   color: #fff;
-}
-.login-box__name_header {
   font-size: 35px;
+  @include phone {
+    font-size: 21px;
+  }
 }
-.login-box__descr_header {
+.login-box__subtitle_header {
   font-family: 'robotolight';
-  color: rgba(#fff, .8);
+  color: rgba(#fff, .5);
 }

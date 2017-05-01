@@ -1,59 +1,69 @@
-.section__works {
+.my-works {
   background-image: url('../img/works_header_bg.png');
   background-repeat: no-repeat;
-  background-size: inherit;
+  background-size: contain;
   background-position: 50% 0;
 }
-.triangles {
-  position: absolute;
-  bottom: 0;
-  height: 100px;
-  width: 100%;
-
-  &__left_white, &__right_white {
-    fill: #fff;
+.slider {
+  display: flex;
+  flex-flow: column wrap;
+  height: 750px;
+  justify-content: space-around;
+  background-color: $beige;
+  @include laptop {
+    height: 100%;
+    padding-top: 100px;
   }
 }
-.slider.works__slider {
+.slider__descr {
   display: flex;
-}
-.slider__image_big {
-  margin-top: 66px;
-  margin-bottom: 44px;
-}
-.works__slider_left, .works__slider_right {
-  flex-basis: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   background-color: $grey;
+  @include laptop {
+    padding-top: 40px; 
+    padding-bottom: 60px;
+  }
 }
-.works__slider_right {
-  background-color: $beige;
+.descrcription {
+  display: flex;
+  flex-direction: column;
+  @include phone{
+    align-self: stretch;
+  }
 }
-.works__slider_left {
-  position: relative;
-}
-.works__block {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 5px;
-  overflow: hidden;
+.cources {
+  padding: 20px 130px;
+  border-top: 1px solid $accent-color;
+  border-bottom: 1px solid $accent-color;
   text-align: center;
+  margin-bottom: 40px;
+  @include phone{
+    padding: 20px 0;
+  }
 }
-.works__slider_right {
-text-align: center;
+.cources__text {
+  color: $accent-color;
+  text-transform: uppercase;
 }
-.sliders__image_small {
-  font-size: 0;
+.slider__image_size_big {
+  display: flex;
+  justify-content: center;
+  @include laptop {
+    order: -1;
+    padding-bottom: 50px; 
+  }
 }
-.slider_pic_small {
+.slider__image_size_small {
+  display: flex;
+  justify-content: center;
+}
+.slider_pic {
   max-width: 100%;
 }
-.slider__image_small_left, 
-.slider__image_small_right {
-  display: inline-block;
-  width: 50%;
-  height: auto;
+.slider__image_small {
   position: relative;
   &::before {
     content: '';
@@ -64,11 +74,9 @@ text-align: center;
     background-color: $overlay;
   }
 }
-.works__text {
-  color: $accent-color;
-  text-transform: uppercase;
-  padding: 18px 130px;
-  border-top: 1px solid $accent-color;
-  border-bottom: 1px solid $accent-color;
-  white-space: nowrap;
+.block_width_50 {
+  width: 50%;
+  @include laptop {
+    width: 100%;
+  }
 }
