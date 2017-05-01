@@ -26,9 +26,18 @@
   &_width_25 {
     width: 25%;
   }
+  @include tablets {
+    display: none;
+  }
 }
 .section__content_width_65 {
   width: 65%;
+}
+.section__content {
+  @include tablets {
+    width: 100%;
+    padding: 0 30px;
+  }
 }
 .aside__list {
   text-align: right;
@@ -64,6 +73,9 @@
     height: 5px;
     width: 70%;
     background-color: rgba($main-color, .07);
+    @include tablets {
+      width: 100%;
+    }
   }
 }
 .article__code_image {

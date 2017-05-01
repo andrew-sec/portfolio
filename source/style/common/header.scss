@@ -1,8 +1,6 @@
 .header {
-  background-image:url('../img/main-bg.jpg');
+  background: url('../img/main-bg.jpg') no-repeat, center center;
   background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
   height: 620px;
   padding: 28px 28px 0;
   display: flex;
@@ -17,6 +15,9 @@
 .header__top-line_width_80 {
   width: 80%;
   align-self: center;
+}
+.title_image_transparent {
+  max-width: 100%;
 }
 .socials__list_header {
   display: flex;
@@ -58,6 +59,9 @@
 .login-box__title_35px {
   color: #fff;
   font-size: 35px;
+  @include phone {
+    font-size: 21px;
+  }
 }
 .login-box__subtitle_header {
   font-family: 'robotolight';

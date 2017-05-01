@@ -2,6 +2,9 @@
   height: 100px;
   width: 100%;
   z-index: 50;
+  @include tablets {
+    height: 70px;
+  }
   &_pos_absolute {
     position: absolute;
     left: 0;

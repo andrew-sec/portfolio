@@ -7,119 +7,121 @@ mixin svg(addClass, addId)
     include _header
 
     section.section.section_about
-      .about-descr.block_width_50
-        .about-descr__title.flex_width_50
+      .about-descr
+        .about-descr__title
           .title.text_font_63.text_align_center.flex_width_50
             span.title__text Обо мне
         .user
-          .user__image.flex_width_50
+          .user__image
             img.about__user_pic(src='assets/img/user-pic.jpg', alt='user-pic')
           .title.text_font_35.text_align_center
             span.title__text Кто я
           .user__text
             p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
             p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-      .about__skills.block_width_50
-        .title.text_font_35.text_align_center
-          span.title__text Чем я могу быть<br> вам полезен
-        .about__text
-          p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
-        .about__content
-          ul.skills
-            li.skills__item
-              .skill-section
-                .skill-section__title Frontend
-                  ul.circles
-                    li.circles__item
-                      .skill
-                        svg.skill__circle(viewbox='0 0 110 110')
-                          circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
-                          circle.skill__circle_second.circle-90(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
-                        span.skill__name HTML5
-                    li.circles__item
-                      .skill
-                        svg.skill__circle(viewbox='0 0 110 110')
-                          circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
-                          circle.skill__circle_second.circle-85(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
-                        span.skill__name CSS3
-                    li.circles__item
-                      .skill
-                        svg.skill__circle(viewbox='0 0 110 110')
-                          circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
-                          circle.skill__circle_second.circle-85(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
-                        span.skill__name jQuery
-          ul.skills
-            li.skills__item
-              .skill-section
-                .skill-section__title Backend
-                  ul.circles
-                    li.circles__item
-                      .skill
-                        svg.skill__circle(viewbox='0 0 110 110')
-                          circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
-                          circle.skill__circle_second.circle-90(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
-                        span.skill__name PHP
-                    li.circles__item
-                      .skill
-                        svg.skill__circle(viewbox='0 0 110 110')
-                          circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
-                          circle.skill__circle_second.circle-85(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
-                        span.skill__name MySQL
-                    li.circles__item
-                      .skill
-                        svg.skill__circle(viewbox='0 0 110 110')
-                          circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
-                          circle.skill__circle_second.circle-85(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
-                        span.skill__name Node.js<br>&npm
-                    li.circles__item
-                      .skill
-                        svg.skill__circle(viewbox='0 0 110 110')
-                          circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
-                          circle.skill__circle_second.circle-85(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
-                        span.skill__name Mongo.db
-          ul.skills
-            li.skills__item
-              .skill-section
-                .skill-section__title Workflow
-                  ul.circles
-                    li.circles__item
-                      .skill
-                        svg.skill__circle(viewbox='0 0 110 110')
-                          circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
-                          circle.skill__circle_second.circle-90(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
-                        span.skill__name Git
-                    li.circles__item
-                      .skill
-                        svg.skill__circle(viewbox='0 0 110 110')
-                          circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
-                          circle.skill__circle_second.circle-85(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
-                        span.skill__name Gulp
-                    li.circles__item
-                      .skill
-                        svg.skill__circle(viewbox='0 0 110 110')
-                          circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
-                          circle.skill__circle_second.circle-85(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
-                        span.skill__name Bower
-    
-    section.section.section_height_100vh.section__map(style='background-image:url(assets/img/map.jpg)')
-      .map__contacts.login-box
-        .title.text_font_35
-          span.title__text Контакты
-        ul.contacts
-          li.contacts__item
-            +svg('contacts__icon','skype_n')
-            span.contacts__text skype_kdn
-          li.contacts__item
-            +svg('contacts__icon','envelope')
-            span.contacts__text astahov@gmail.com
-          li.contacts__item
-            +svg('contacts__icon','phone')
-            span.contacts__text +7 931 200 93 24
-          li.contacts__item
-            +svg('contacts__icon','map_marker')
-            span.contacts__text г.Новосибирск, ул. Инская, д. 5
+      .skills
+        .skills__descr
+          .title.text_font_35.text_align_center
+            span.title__text Чем я могу быть<br> вам полезен
+          .about__text
+            p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+        .skills__content
+        ul.skills__list
+          li.skills__item
+            .skill-section
+              .skill-section__title Frontend
+                ul.circles
+                  li.circles__item
+                    .skill
+                      svg.skill__circle(viewbox='0 0 110 110')
+                        circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
+                        circle.skill__circle_second.circle-90(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                      span.skill__name HTML5
+                  li.circles__item
+                    .skill
+                      svg.skill__circle(viewbox='0 0 110 110')
+                        circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
+                        circle.skill__circle_second.circle-85(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                      span.skill__name CSS3
+                  li.circles__item
+                    .skill
+                      svg.skill__circle(viewbox='0 0 110 110')
+                        circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
+                        circle.skill__circle_second.circle-85(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                      span.skill__name jQuery
+        ul.skills__list
+          li.skills__item
+            .skill-section
+              .skill-section__title Backend
+                ul.circles
+                  li.circles__item
+                    .skill
+                      svg.skill__circle(viewbox='0 0 110 110')
+                        circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
+                        circle.skill__circle_second.circle-90(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                      span.skill__name PHP
+                  li.circles__item
+                    .skill
+                      svg.skill__circle(viewbox='0 0 110 110')
+                        circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
+                        circle.skill__circle_second.circle-85(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                      span.skill__name MySQL
+                  li.circles__item
+                    .skill
+                      svg.skill__circle(viewbox='0 0 110 110')
+                        circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
+                        circle.skill__circle_second.circle-85(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                      span.skill__name Node.js<br>&npm
+                  li.circles__item
+                    .skill
+                      svg.skill__circle(viewbox='0 0 110 110')
+                        circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
+                        circle.skill__circle_second.circle-85(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                      span.skill__name Mongo.db
+        ul.skills__list
+          li.skills__item
+            .skill-section
+              .skill-section__title Workflow
+                ul.circles
+                  li.circles__item
+                    .skill
+                      svg.skill__circle(viewbox='0 0 110 110')
+                        circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
+                        circle.skill__circle_second.circle-90(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                      span.skill__name Git
+                  li.circles__item
+                    .skill
+                      svg.skill__circle(viewbox='0 0 110 110')
+                        circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
+                        circle.skill__circle_second.circle-85(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                      span.skill__name Gulp
+                  li.circles__item
+                    .skill
+                      svg.skill__circle(viewbox='0 0 110 110')
+                        circle.skill__circle_first(r='45', cx='50%', cy='50%', fill='none')
+                        circle.skill__circle_second.circle-85(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                      span.skill__name Bower
+  
+    section.section.section_height_100vh.section__map
+      .contacts_wrap
+        .contacts.login-box
+          .title.text_font_35
+            span.title__text Контакты
+          ul.contacts__list
+            li.contacts__item
+              +svg('contacts__icon','skype_n')
+              span.contacts__text skype_kdn
+            li.contacts__item
+              +svg('contacts__icon','envelope')
+              span.contacts__text astahov@gmail.com
+            li.contacts__item
+              +svg('contacts__icon','phone')
+              span.contacts__text +7 931 200 93 24
+            li.contacts__item
+              +svg('contacts__icon','map_marker')
+              span.contacts__text г.Новосибирск, ул. Инская, д. 5
         
-      footer.footer.footer_position_absolute
+      footer.footer.footer_flex
         .footer__row
           nav.footer__nav
             ul.footer__list

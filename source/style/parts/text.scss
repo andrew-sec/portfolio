@@ -3,9 +3,18 @@
 }
 .text_size_28 {
   font-size: 28px;
+  @include phone {
+    font-size: 21px;
+  }
 }
 .text_font_63 {
   font-size: 63px;
+  @include tablets {
+    font-size: 49px;
+  }
+  @include phone {
+    font-size: 35px;
+  }
 }
 .text_align_center {
   display: flex;
@@ -14,6 +23,12 @@
 }
 .text_font_35 {
   font-size: 35px;
+   @include tablets {
+    font-size: 30px;
+  }
+  @include phone {
+    font-size: 21px;
+  }
 }
 .text_mb_30 {
   margin-bottom: 30px;

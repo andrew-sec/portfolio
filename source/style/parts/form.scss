@@ -24,6 +24,9 @@
   &:last-child {
     margin-bottom: 0;
   }
+  @include phone {
+   width: 260px;
+  }
 }
 .input_min-height_140 {
   min-height: 140px;

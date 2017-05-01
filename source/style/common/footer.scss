@@ -6,7 +6,7 @@
     width: 100%;
     background-color: rgba($main-color, .85);
   }
-  &_blog {
+  &_flex {
     width: 100%;
     background-color: rgba($main-color, .85);
   }
@@ -15,13 +15,24 @@
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid rgba(#fff, .1);
+  @include laptop {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .footer__list {
   margin-left: 30px;
   display: flex;
+  @include phone {
+    margin-left: 10px;
+  }
 }
 .footer__item {
   margin-right: 40px;
+  @include phone {
+    margin-right: 10px;
+  }
 }
 .footer__link {
   text-decoration: none;
@@ -29,6 +40,10 @@
   color: #fff;
   padding-top: 24px;
   padding-bottom: 24px;
+  @include phone {
+    padding-top: 30px;
+    padding-bottom: 18px;
+  }
 }
 .footer__socials {
   display: flex;
@@ -36,6 +51,10 @@
 }
 .social_view_circle {
   margin-right: 30px;
+  @include laptop {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
 }
 .socials__item_footer {
   margin-left: 10px;
@@ -59,8 +78,16 @@
 .footer__text {
   font-family: 'robotolight';
   color: rgba(#fff, .5);
-  padding: 14px 30px; 
+  padding: 14px 30px;
+  text-align: center;
+  @include laptop {
+    padding: 7px 0;
+    text-align: center;
+  }
 }
 .footer__text_copyright {
   padding-top: 24px;
+  @include laptop {
+    padding-top: 0;
+  }
 }

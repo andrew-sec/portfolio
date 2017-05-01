@@ -1,12 +1,20 @@
 .section__map {
+  background: url('../img/map.jpg') no-repeat center center;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
-.map__contacts {
+.contacts_wrap {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include phone {
+    justify-content: flex-start;
+  }
+}
+.contacts {
   background-color: rgba(#fff, .85);
 }
 .contacts__icon {
