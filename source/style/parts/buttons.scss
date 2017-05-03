@@ -1,32 +1,31 @@
 .button {
   border: 1px solid #fff;
   border-radius: 4px;
-  color: #fff;
-  background-color: transparent;
   padding: 14px 28px;
-  display: inline-block;
-  text-decoration: none;
+  background-color: transparent;
+  &:hover {
+    background-color: #fff;
+  }
 }
-.button-action-auth {
+.button:hover .text_color_accent {
+  color: $accent-color;
+}
+.button_pos_absolute {
   position: absolute;
   top: 24px;
   right: 100px;
-  
-  &:hover {
-    background-color: #fff;
-    color: $accent-color;
+  @include phone {
+    right: 50%;
+    transform: translateX(50%);
   }
 }
-
-.works__link_button {
+.button_link {
   position: relative;
   padding: 14px 32px 14px 50px;
   background-color: rgba(0, 191, 165, 0.85);
-  display: inline-block;
-  color: #fff;
-  text-decoration: none;
-  margin: 42px 0;
   border-radius: 4px;
+  text-decoration: none;
+  align-self: center;
   &::before {
     content: '';
     position: absolute;
@@ -34,7 +33,7 @@
     top: 50%;
     left: 18px;
     transform: translateY(-50%);
-    background: url(../img/icons/link.svg) no-repeat center center;
+    background: url('../img/icons/link.svg') no-repeat center center;
     background-size: contain;
     height: 22px;
     width: 22px; 

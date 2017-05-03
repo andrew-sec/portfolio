@@ -1,11 +1,15 @@
 //Vars
-$container-width: 800px;
+$container-width: 1200px;
 $max-image-size: 443px;
 $main-color: #455a64;
 $accent-color: #00bfa5;
 $overlay: rgba(#b6b4ae, .7);
 $blog-overlay: rgba(#016672, .3);
+$grey : #efeee9;
+$beige: #eeebdf;
+$main-font-color : #373e42;
 
+//layout
 * {
 	box-sizing: border-box;
 }
@@ -15,41 +19,50 @@ body {
 	width: 100%;
 	height: 100%;
 }
-
 body {
 	font-size: 16px;
 	line-height: 1.42;
 	-webkit-font-smoothing: antialiased;
 	font-family: "Roboto", sans-serif;
 	color: $main-color;
+	@include tablets {
+		font-size: 14px;
+	}
 }
-
 .wrapper {
-	height: 100%;
 	position: relative;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
 }
-
 .maincontent {
-	height: 100%;
 	transform: translate3d(0, 0, 0);
+	flex: 1;
 }
-
 .header, .section {
 	position: relative;
 	background-size: cover;
-	min-width: $container-width;
+		@include desktop {
+			max-width: 1200px;
+		}
+		@include laptop {
+			max-width: 980px;
+		}
+		@include tablets {
+			max-width: 768px;
+		}
+		@include phone {
+			max-width: 100%;
+		}
 }
-
-.section__full-screen {
+.section_height_100vh {
 	height: 100vh;
-	min-height: 650px;
+	position: relative;
 }
-
 ul {
 	padding: 0;
 	margin: 0;
 }
-
 li {
 	list-style-type: none;
 }
@@ -57,18 +70,13 @@ h1,h2,h3,h4,h5,h6 {
 	margin-top: 0;
 	font-weight: normal;
 }
-
 table, th, td {
 	border-collapse: collapse;
 }
 img {
+	max-width: 100%;
 	height: auto;
 }
-
 textarea {
   resize: vertical;
-}
-
-.footer {
-	min-width: $container-width;
 }

@@ -1,109 +1,106 @@
-mixin svg(addClass, addId)
-  svg(class=addClass)
-    use(xlink:href=`assets/img/sprite/sprite.svg#${addId}`)
+include ../mixins/mixin
 
 .wrapper
   .maincontent
-    include _header
+    include _header-triangles-white
 
-    section.section.section__works
-      .title.works__title
-        | Мои работы
-      .slider.works__slider
-        .works__slider_left
-          .works__block
-            .title.works__title_h3.subtitle
-              | Сайт школы онлайн<br> образования
-            .works__text
-              | html, css, javascript
-            a.works__link_button(href="#") Посмотреть сайт
-        .works__slider_right
-          .slider__image_big
-            img.slider_pic(src='assets/img/slider/work-1.png', alt='work-1')
-          .sliders__image_small
-            .slider__image_small_left
-              img.slider_pic.slider_pic_small(src='assets/img/slider/work-2.png', alt='work-2')
-              .header__arrow-scroll.arrow-scroll
-                a.arrow-scroll__arrow.arrow-scroll__link_works(href='#')
-                  +svg('arrow-scroll__arrow_works','arrow_down')
+    section.section.section_works
+      .my-works
+        .title.text_font_63.text_align_center
+          span.title__text.text_line-height_184 Мои работы
+      .slider
+        .slider__descr.block_width_50
+          .descrcription
+            .title.text_font_35.text_align_center
+              span.title__text.text_mb_30 Сайт школы онлайн<br> образования
+            .cources 
+              span.cources__text html, css, javascript
+            a.button_link(href="#") 
+              span.text_color_white Посмотреть сайт
+        .slider__image_size_big.block_width_50
+          img.slider_pic(src='assets/img/slider/work-1.png', alt='work-1')
+        .slider__image_size_small.block_width_50
+          .slider__image_small
+            img.slider_pic.slider_pic_small(src='assets/img/slider/work-2.png', alt='work-2')
+            .slider__arrow-scroll
+              a.arrow-scroll_down(href='#')
+                +svg('arrow-scroll__icon','portf_arrow_down')
+
+          .slider__image_small
+            img.slider_pic.slider_pic_small(src='assets/img/slider/work-3.png', alt='work-3')
+            .slider__arrow-scroll
+              a.arrow-scroll_up(href='#')
+                +svg('arrow-scroll__icon','portf_arrow_up')
   
-            .slider__image_small_right
-              img.slider_pic.slider_pic_small(src='assets/img/slider/work-3.png', alt='work-3')
-              .header__arrow-scroll.arrow-scroll
-                a.arrow-scroll__arrow.arrow-scroll__link_works(href='#')
-                  +svg('arrow-scroll__arrow_works arrow-scroll__arrow_works_up','arrow_down')
-  
-    .title.works__title.feedback__title
-        | Что обо мне<br> говорят 
-    section.section.section__full-screen.section__feedback      
+    .title.text_font_63.text_align_center.text_mb_15
+      span.title__text Что обо мне<br> говорят 
+    section.section.section_feedback      
       ul.feedback__list
         li.feedback__item
+          .quotes
+            img.quotes__icon(src="assets/img/icons/quotes.png", alt="quotes icon")
           .feedback__text
             p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-          .reviever.reviewer__feedback
-            .feedback__pic
-              img.feedback__pic_left(src="assets/img/koval.jpg", alt="photo")
-            .feedback__reviewer
-              .feedback__name
-                | Ковальчук Дмитрий
-              .feedback__pos
-                | основатель Loftschool
+          .reviewer
+            .reviewer__pic
+              img.reviever__pic_elem(src="assets/img/koval.jpg", alt="photo")
+            .reviewer__info
+              span.reviewer__text.reviewer__text_font_bold.reviewer__text_color_accent Ковальчук Дмитрий
+              span.reviewer__text.reviewer__text_color_accent основатель Loftschool
+              
         li.feedback__item
+          .quotes
+            img.quotes__icon(src="assets/img/icons/quotes.png", alt="quotes icon")
           .feedback__text
             p Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
-          .reviever.reviewer__feedback
-            .feedback__pic
-              img.feedback__pic_right(src="assets/img/sabantsev.jpg", alt="photo")
-            .feedback__reviewer
-              .feedback__name
-                | Сабанцев Владимир
-              .feedback__pos
-                | преподаватель
+          .reviewer
+            .reviewer__pic
+              img.reviever__pic_elem(src="assets/img/sabantsev.jpg", alt="photo")
+            .reviewer__info
+              span.reviewer__text.reviewer__text_font_bold.reviewer__text_color_accent Сабанцев Владимир
+              span.reviewer__text.reviewer__text_color_accent преподаватель
       
-      .form__block
-        .title.subtitle
-          .form__title
-            | Связаться со мной
-        form.form__feedback
+      .feedback__form
+        .title.text_font_35
+          span.title__text Связаться со мной
+        form.form
           .inputs__block
-            input.input.input__name(type='text' placeholder='Имя')
-            input.input.input__email(type='email' placeholder='E-mail')
-            textarea.input.textarea__message(placeholder='Ваше сообщение')
+            input.input__item(type='text' placeholder='Имя')
+            input.input__item(type='email' placeholder='E-mail')
+            textarea.input__item.input_min-height_140(placeholder='Ваше сообщение')
           .form__buttons
-            input.input__send.form__button-item(type='submit' value='Отправить')
-            input.input__reset.form__button-item(type='reset' value='Очистить')
-        a.arrow-scroll__arrow.arrow-scroll__up(href='#')
-          +svg('arrow__up','portf_arrow_up')
+            input.button__item(type='submit' value='Отправить')
+            input.button__item(type='reset' value='Очистить')
+      a.arrow-scroll_footer_up(href='#')
+        +svg('arrow__up','portf_arrow_up')
         
-      footer.footer.footer_position_absolute
-        .footer_row_top
-          nav.navigation.navigation_location_footer
-            ul.navigation_location_footer__list
-              li.navigation_location_footer__item
-                a(href='works.html' class='navigation_location_footer__link') Мои работы
-              li.navigation_location_footer__item
-                a(href='about.html' class='navigation_location_footer__link') Обо мне
-              li.navigation_location_footer__item
-                a(href='blog.html' class='navigation_location_footer__link') Блог
-              li.navigation_location_footer__item
-                a(href='#' class='navigation_location_footer__link') Авторизация
+      footer.footer.footer_flex
+        .footer__row
+          nav.footer__nav
+            ul.footer__list
+              li.footer__item
+                a(href='works.html' class='footer__link') Мои работы
+              li.footer__item
+                a(href='about.html' class='footer__link') Обо мне
+              li.footer__item
+                a(href='blog.html' class='footer__link') Блог
+              li.footer__item
+                a(href='#' class='footer__link') Авторизация
           
-          .footer__socials.socials
-            ul.socials__list.socials__list_footer
-              li.socials__item.socials__item_footer
+          .footer__socials
+            ul.socials.social_view_circle
+              li.socials__item
                 a(href='#' class=`socials__link socials__link_footer socials__link_vk`)
                   +svg('socials__icon socials__icon_footer','vk_round')
-              li.socials__item.socials__item_footer
+              li.socials__item
                 a(href='#' class=`socials__link socials__link_footer socials__link_git`)
                   +svg('socials__icon socials__icon_footer','github_round')
-              li.socials__item.socials__item_footer
+              li.socials__item
                 a(href='#' class=`socials__link socials__link_footer socials__link_in`)
                   +svg('socials__icon socials__icon_footer','in_round')
-    
-        .footer_row_bottom
-          .footer__text.footer__text_left
-            .footer__text_about
-              | Я веб-разработчик из Киева, и этот сайт я сделал в рамках<br> обучения в Школе онлайн образования LoftSchool. 
-          .footer__text.footer__text_right
-            .copyright 
-              | © Андрей Секачев | создано с любовью в LoftSchool
+        
+        .footer__row
+          span.footer__text
+            | Я веб-разработчик из Киева, и этот сайт я сделал в рамках<br> обучения в Школе онлайн образования LoftSchool. 
+          span.footer__text.footer__text_copyright
+            | © Андрей Секачев | создано с любовью в LoftSchool

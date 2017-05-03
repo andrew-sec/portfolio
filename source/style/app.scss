@@ -1,12 +1,8 @@
-//vars
-$grey : #efeee9;
-$beige: #eeebdf;
-$main-font-color : #373e42;
-
 //Layout
+@import 'layout/mixins';
 @import 'layout/adjustments';
 @import 'fonts/fonts';
-@import 'layout/normalize';
+// @import 'layout/normalize';
 
 //Style Parts
 @import 'parts/social-icons';
@@ -17,6 +13,8 @@ $main-font-color : #373e42;
 @import 'parts/circles';
 @import 'parts/buttons';
 @import 'parts/form';
+@import 'parts/text';
+@import 'parts/layout';
 
 //Common (sections)
 @import 'common/**/*.scss';

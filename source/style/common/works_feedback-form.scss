@@ -1,43 +1,56 @@
-.section__feedback {
+.section_feedback {
   background-image: url('../img/reviews.jpg'), url('../img/blur_bg.svg');
   background-repeat: no-repeat, no-repeat;
   background-position: center center, center center;
   background-size: cover, cover;
   position: relative;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 .feedback__list {
-  text-align: center;
-  margin-bottom: 70px
+  display: flex;
+  justify-content: center;
+  margin-bottom: 72px;
+  @include phone {
+    flex-direction: column;
+  }
 }
 .feedback__item {
-  display: inline-block;
   max-width: 390px;
-  vertical-align: top;
   text-align: left;
-}
-.feedback__text {
   padding: 20px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.reviewer__feedback {
-  margin-left: 12px;
+.quotes {
+  align-self: flex-start;
 }
-.feedback__pic {
+.reviewer {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+}
+.reviewer__info {
+  display: flex;
+  flex-direction: column;
+}
+.reviewer__pic {
   width: 78px;
   height: 78px;
   border-radius: 50%;
   overflow: hidden;
-  float: left;
   margin-right: 20px;
 }
-.feedback__pic_left,
-.feedback__pic_right {
+.reviever__pic_elem {
   width: 78px;
 }
-.feedback__reviewer {
+.reviewer__text_color_accent {
   color: $accent-color;
-  padding-top: 20px;
 }
-.feedback__name {
+.reviewer__text_font_bold {
   font-family: 'robotobold';
 }

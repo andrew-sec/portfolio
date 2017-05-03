@@ -1,13 +1,22 @@
 .triangles {
-  position: absolute;
-  bottom: 0;
   height: 100px;
   width: 100%;
-
-  &__left {
+  z-index: 50;
+  @include tablets {
+    height: 70px;
+  }
+  &_pos_absolute {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  &_fill_grey {
     fill: $grey;
   }
-  &__right {
+  &_fill_beige {
     fill: $beige;
+  }
+  &_fill_white {
+    fill: #fff;
   }
 }
