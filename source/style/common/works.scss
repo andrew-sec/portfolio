@@ -12,7 +12,8 @@
   background-color: $beige;
   @include laptop {
     height: 100%;
-    padding-top: 100px;
+    padding-top: 50px;
+    margin-bottom: 50px;
   }
 }
 .slider__descr {
@@ -51,6 +52,7 @@
 .slider__image_size_big {
   display: flex;
   justify-content: center;
+  align-items: center;
   @include laptop {
     order: -1;
     padding-bottom: 50px; 

@@ -1,6 +1,4 @@
-mixin svg(addClass, addId)
-  svg(class=addClass)
-    use(xlink:href=`assets/img/sprite/sprite.svg#${addId}`)
+include ../mixins/mixin
 
 .wrapper
   .maincontent
@@ -15,13 +13,13 @@ mixin svg(addClass, addId)
         span.login-box__subtitle
           | Личный сайт веб разработчика
         ul.socials.login-box__socials.socials_color_cyan
-          li.socials__item.social__item_welcome
+          li.socials__item.socials__item_welcome
             a(href='#' class=`socials__link`)
               +svg('socials__icon','vk')
-          li.socials__item.social__item_welcome
+          li.socials__item.socials__item_welcome
             a(href='#' class=`socials__link`)
               +svg('socials__icon','github')
-          li.socials__item.social__item_welcome
+          li.socials__item.socials__item_welcome
             a(href='#' class=`socials__link`)
               +svg('socials__icon','in')
         nav.navigation

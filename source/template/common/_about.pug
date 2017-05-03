@@ -1,6 +1,4 @@
-mixin svg(addClass, addId)
-  svg(class=addClass)
-    use(xlink:href=`assets/img/sprite/sprite.svg#${addId}`)
+include ../mixins/mixin
     
 .wrapper
   .maincontent
@@ -102,7 +100,7 @@ mixin svg(addClass, addId)
                         circle.skill__circle_second.circle-85(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
                       span.skill__name Bower
   
-    section.section.section_height_100vh.section__map
+    section.section.section_height_100vh.section_map
       .contacts_wrap
         .contacts.login-box
           .title.text_font_35

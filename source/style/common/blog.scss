@@ -30,10 +30,10 @@
     display: none;
   }
 }
-.section__content_width_65 {
+.section_content_width_65 {
   width: 65%;
 }
-.section__content {
+.section_content {
   @include tablets {
     width: 100%;
     padding: 0 30px;
@@ -78,6 +78,8 @@
     }
   }
 }
-.article__code_image {
-  width: 100%;
+.article__code-image {
+  @include phone {
+    max-width: none;
+  }
 }

@@ -1,13 +1,11 @@
-mixin svg(addClass, addId)
-  svg(class=addClass)
-    use(xlink:href=`assets/img/sprite/sprite.svg#${addId}`)
+include ../mixins/mixin
 
 .wrapper
   .maincontent
     include _blog_header
     section.section_blog
       aside.aside.aside_width_25
-        nav.nav__blog
+        nav.nav_blog
           ul.aside__list
             li.aside__item
               a.aside__link(href="#") Самое важное в Sass
@@ -17,8 +15,8 @@ mixin svg(addClass, addId)
               a.aside__link(href="#") Самый необходимый набор Gulp плагинов
             li.aside__item
               a.aside__link(href="#") Почему я выбрал Jade
-      section.section__content.section__content_width_65
-        article.article__blog
+      section.section_content.section_content_width_65
+        article.article_blog
           .title.text_font_35
             | Самое важное в Sass
           .article__date
@@ -27,10 +25,10 @@ mixin svg(addClass, addId)
             p Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.
             p Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
           .article__code
-            img.article__code_image(src="assets/img/code.jpg", alt="code")
+            img.article__code-image(src="assets/img/code.jpg", alt="code")
 
 
-        article.article__blog
+        article.article_blog
           .title.text_font_35
             | Приёмы в вёрстке, без которых не обходится ни один сайт
           .article__date

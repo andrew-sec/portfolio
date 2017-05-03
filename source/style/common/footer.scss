@@ -37,9 +37,12 @@
 .footer__link {
   text-decoration: none;
   display: block;
-  color: #fff;
+  color: rgba(#fff, .5);
   padding-top: 24px;
   padding-bottom: 24px;
+  &:hover {
+    color: #fff;
+  }
   @include phone {
     padding-top: 30px;
     padding-bottom: 18px;
