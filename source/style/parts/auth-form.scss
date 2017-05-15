@@ -1,0 +1,147 @@
+.login-block {
+  background-color: rgba(#fff, .85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.login-block__title {
+  margin-bottom: 30px;
+}
+.form-auth {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+.form__inputs-block {
+  // padding-left: 20px;
+  // padding-right: 20px;
+}
+.form__checks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.form__label_check {
+  margin-bottom: 20px;
+}
+.form__checks-text {
+  margin-bottom: 14px;
+}
+.form__label {
+  overflow: hidden;
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+  border-radius: 5%;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    background-color: $beige;
+  }
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 40%;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+  }
+  &_login::after {
+    background: url('../img/icons/login.svg') no-repeat, center center;
+    background-size: contain;
+  }
+  &_pass::after {
+    background: url('../img/icons/password.svg') no-repeat, center center;
+    background-size: contain;
+  }
+}
+.form__input {
+  display: block;
+  width: 342px;
+  padding: 10px 0 10px 62px;
+  border: none;
+  @include phone {
+    width: 260px;
+  }
+}
+.form__answers {
+  display: flex;
+  justify-content: space-around;
+}
+.form__input[type='radio'], 
+.form__input[type='checkbox'] {
+  display: none;
+}
+.label-text {
+  position: relative;
+  height: 20px;
+  display: block;
+  cursor: pointer;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    top: 0;
+    left: -30px;
+  }
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.label-text_checkbox {
+  &::before {
+    border-radius: 3px;
+    background-color: $accent-color;
+  }
+}
+.form__input[type='checkbox']:checked ~ .label-text_checkbox::after {
+  width: 13px;
+  height: 10px;
+  background: url(../img/icons/check.png) no-repeat, center center;
+  background-size: contain;
+  left: -27px;
+}
+.label-text_radio {
+  &::before {
+    border: 1px solid grey;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+}
+.form__input[type='radio']:checked ~ .label-text_radio::after {
+  width: 10px;
+  height: 10px;
+  left: -25px;
+  background-color: $accent-color;
+  border-radius: 50%;
+}
+.form__label_radio + .form__label_radio {
+  margin-left: 70px;
+}
+.button_auth {
+  padding: 14px 32px;
+  background-color: rgba(0, 191, 165, 0.85);
+  flex: 1;
+  border: none;
+  &:hover {
+    background-color: darken($accent-color, 10%);
+  }
+}
+.button_auth + .button_auth {
+  border-left: 1px solid white;
+}

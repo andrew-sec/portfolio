@@ -1,6 +1,7 @@
 include ../mixins/mixin
 
 header.header.header_blog
+  .header__bg
   .header__top-line.header__top-line_width_80
     ul.socials.text_color_rgba-white
       li.socials__item.social__item_header
@@ -13,10 +14,13 @@ header.header.header_blog
         a.socials__link.socials__link_header(href='#')
           +svg('socials__icon socials__icon_header','in')
     
-    +svg('hamburger-menu__icon','hamburger')
+    .hamburger
+      span.hamburger__line
+      span.hamburger__line
+      span.hamburger__line
   
   .header__title_transparent
-    img(src="assets/img/blog_header.png", alt="blog header")
+    img.title_image_transparent(src="assets/img/blog_header.png", alt="blog header")
 
   .login-box.login-box__bg_transparent
     .login-box__pic
@@ -28,3 +32,21 @@ header.header.header_blog
   svg(class='triangles' xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 100', preserveAspectRatio='none')
     polygon(class='triangles_fill_white' points='0,0 0,100 500,100 500,90')
     polygon(class='triangles_fill_white' points='1000,0   1000,100   500,100   500,90')
+  
+  .fullscreen-menu
+    .fullscreen-menu__bg.fullscreen-menu__bg_left
+    .fullscreen-menu__bg.fullscreen-menu__bg_right
+    nav.fullscreen-menu__nav
+      ul.hide-menu__list
+        li.hide-menu__item
+          a.hide-menu__link.title.text_font_63(href="/works.html")
+            span.title__text.text_color_white Мои работы
+        li.hide-menu__item
+          a.hide-menu__link.title.text_font_63(href="/about.html")
+            span.title__text.text_color_white Обо мне
+        li.hide-menu__item
+          a.hide-menu__link.title.text_font_63(href="/blog.html")
+            span.title__text.text_color_white Блог
+        li.hide-menu__item
+          a.hide-menu__link.title.text_font_63(href="/index.html")
+            span.title__text.text_color_white Авторизация
