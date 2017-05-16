@@ -1,7 +1,7 @@
 include ../mixins/mixin
 
 header.header
-  .header__bg
+  #header__bg.header__bg
   .header__top-line
     ul.socials.text_color_rgba-white
       li.socials__item.social__item_header
@@ -20,9 +20,9 @@ header.header
       span.hamburger__line
 
   .header__title_transparent
-    img.title_image_transparent(src="assets/img/portfolio_header_bg.png", alt="portfolio header")
+    img#title_image_transparent.title_image_transparent(src="assets/img/portfolio_header_bg.png", alt="portfolio header")
 
-  .login-box.login-box__bg_transparent
+  #login-box.login-box.login-box__bg_transparent
     .login-box__pic
       img.login-box__pic-elem(src='assets/img/user.jpg', alt='user-photo')
     span.login-box__title_35px
@@ -31,6 +31,4 @@ header.header
       | Личный сайт веб разработчика
   a.arrow-scroll_header_down(href='#')
     +svg('arrow-scroll_header','arrow_down')
-  svg(class='triangles triangles_pos_absolute' xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 100', preserveAspectRatio='none')
-    polygon(class='triangles_fill_grey' points='0,0 0,100 500,100 500,98')
-    polygon(class='triangles_fill_beige' points='1000,0   1000,100   500,100   500,98')
+  +triangles_absolute('triangles', 'triangles_fill_grey', 'triangles_fill_beige')

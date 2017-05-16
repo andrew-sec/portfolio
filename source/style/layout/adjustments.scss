@@ -36,24 +36,23 @@ body {
 	flex-direction: column;
 }
 .maincontent {
-	// transform: translate3d(0, 0, 0);
 	flex: 1;
 }
 .header, .section {
 	position: relative;
 	background-size: cover;
-		@include desktop {
-			max-width: 1200px;
-		}
-		@include laptop {
-			max-width: 980px;
-		}
-		@include tablets {
-			max-width: 768px;
-		}
-		@include phone {
-			max-width: 100%;
-		}
+	@include desktop {
+		max-width: 1200px;
+	}
+	@include laptop {
+		max-width: 980px;
+	}
+	@include tablets {
+		max-width: 768px;
+	}
+	@include phone {
+		max-width: 100%;
+	}
 }
 .section_height_100vh {
 	height: 100vh;
