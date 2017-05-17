@@ -81,14 +81,19 @@ include ../mixins/mixin
       .feedback__form
         .title.text_font_35
           span.title__text Связаться со мной
-        form.form
+        form.form#form_works
           .inputs__block
-            input.input__item(type='text' placeholder='Имя')
-            input.input__item(type='email' placeholder='E-mail')
+            input.input__item(type='text' placeholder='Имя' id='form_name' name='Name')
+            input.input__item(type='email' placeholder='E-mail' id='form_email' name='email')
             textarea.input__item.input_min-height_140(placeholder='Ваше сообщение')
           .form__buttons
-            input.button__item(type='submit' value='Отправить')
-            input.button__item(type='reset' value='Очистить')
+            button.button__item#form_send(type='submit')
+              span.text_color_white Отправить
+            button.button__item(type='reset')
+              span.text_color_white Очистить
+          
+          .error-popup.error-popup_name Вы не ввели имя
+          .error-popup.error-popup_email Вы не ввели email
       a.arrow-scroll_footer_up(href='#')
         +svg('arrow__up','portf_arrow_up')
         

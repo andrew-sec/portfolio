@@ -22,14 +22,12 @@ if($('#parallax').length) {
     });
   }()); 
 }
+
 /////////////////////////// parallax onscroll /////////////////////////
 var parallax = (function () {
   var bg = document.getElementById('header__bg');
   var user = document.getElementById('login-box');
   var sectionText = document.getElementById('title_image_transparent');
-  // var bg = document.querySelector('.header__bg');
-  // var user = document.querySelector('.login-box');
-  // var sectionText = document.querySelector('.title_image_transparent');
   function move (block, windowScroll, strafeAmount) {
     var strafe = windowScroll / -strafeAmount + '%';
     var transformString = 'translate3d(0, ' + strafe + ', 0)';
@@ -100,19 +98,22 @@ $(function () {
 
 /////////////////////// flip ///////////////////////////////
 (function () {
-  $("#flip-to-back").on('click', function () {
+  $('#flip-to-back').on('click', function () {
     $('.flip-container').addClass('visible-back');
     $('#flip-to-back').hide();
   });
-  $("#flip-to-front").on('click', function () {
+  $('#flip-to-front').on('click', function () {
     $('.flip-container').removeClass('visible-back');
     $('#flip-to-back').show();
+    setTimeout(function (){
+      $('input, textarea').val('');
+    }, 300)
   });
 }());
 
 /////////////////////// fullscreen menu + hamburger ///////////////////////
 (function () {
-  $(".hamburger").click(function () {
+  $('.hamburger').click(function () {
     $(this).toggleClass('open');
     $('.fullscreen-menu').fadeToggle('slow', 'linear');
     $('.fullscreen-menu__bg').toggleClass('active');
@@ -128,5 +129,39 @@ $(function () {
   $('.menu-trigger').on('click', function () {
     $(this).toggleClass('menu-trigger_active');
     $('.aside, .section_content').toggleClass('fixed_on_phone');
+  });
+}());
+
+/////////////////////// welcome form validation ///////////////////////
+$(function () {  
+  $('#button_submit').on('click', function (e){
+    e.preventDefault();
+    if ($('#login').val() == '') { 
+      $('.error-popup_login').show();
+    } else if ($('#password').val() == '') { 
+      $('.error-popup_pass').show(); 
+    } else if (!$('#login' && '#password').val() == '') { 
+      $('#form_welcome').submit();
+    }
+  });
+  $( '#login, #password' ).focus(function() {
+    $('.error-popup_login, .error-popup_pass').hide();
+  });
+}());
+
+/////////////////////// works form validation ///////////////////////
+$(function () {  
+  $('#form_send').on('click', function (e){
+    e.preventDefault();
+    if ($('#form_name').val() == '') { 
+      $('.error-popup_name').show();
+    } else if ($('#form_email').val() == '') { 
+      $('.error-popup_email').show(); 
+    } else if (!$('#form_name' && '#form_email').val() == '') { 
+      $('#form_works').submit();
+    }
+  });
+  $( '#form_name, #form_email' ).focus(function() {
+    $('.error-popup_name, .error-popup_email').hide();
   });
 }());

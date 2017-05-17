@@ -56,12 +56,12 @@ include ../mixins/mixin
           .login-block
             .title.login-block__title.text_font_35
               span.title__text Авторизируйтесь
-            form.form.form-auth
+            form.form.form-auth#form_welcome
               .form__inputs-block
-                label.form__label.form__label_login
-                  input.form__input(type='text' placeholder='Логин')
-                label.form__label.form__label_pass
-                  input.form__input(type='password' placeholder='Пароль')
+                label.form__label.form__label_login(for="login")
+                  input.form__input(id='login' type='text' placeholder='Логин' name='login')
+                label.form__label.form__label_pass(for="password")
+                  input.form__input(id='password' type='password' placeholder='Пароль' name='password')
               .form__checks
                 label.form__label_check
                   input.form__input(type='checkbox')
@@ -78,8 +78,11 @@ include ../mixins/mixin
             .form__buttons
               button.button_auth.button_trigger#flip-to-front(type='button')
                 span.text_color_white На главную
-              button.button_auth.button_submit(type='submit')
+              button.button_auth.button_submit#button_submit(type='submit')
                 span.text_color_white Войти
+
+            .error-popup.error-popup_login Вы не ввели логин
+            .error-popup.error-popup_pass Вы не ввели пароль
 
       footer.footer.welcome__footer
         span.footer__copyright © Андрей Секачев | создано с любовью в LoftSchool       
