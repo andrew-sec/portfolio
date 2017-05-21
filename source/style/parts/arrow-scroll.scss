@@ -16,12 +16,14 @@
     fill: #fff;
   }
 }
-.arrow-scroll_up,
-.arrow-scroll_down {
-  position: absolute;
+.slide-toggle {
   width: 44px;
   height: 30px;
+  fill: rgba(#fff, .8);
+  position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  z-index: 2;
+  transition: 0.2s ease;
 }
