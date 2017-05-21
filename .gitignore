@@ -23,6 +23,7 @@
 .project
 .settings
 .tmproj
+.eslintrc
 Thumbs.db
 
 # Folders to ignore

@@ -2,11 +2,11 @@
 @import 'layout/mixins';
 @import 'layout/adjustments';
 @import 'fonts/fonts';
-// @import 'layout/normalize';
 
 //Style Parts
 @import 'parts/social-icons';
 @import 'parts/login-box';
+@import 'parts/auth-form';
 @import 'parts/triangles';
 @import 'parts/arrow-scroll';
 @import 'parts/titles';
@@ -14,7 +14,11 @@
 @import 'parts/buttons';
 @import 'parts/form';
 @import 'parts/text';
-@import 'parts/layout';
+@import 'parts/preloader';
+@import 'parts/flip';
+@import 'parts/fullscreen-menu';
+@import 'parts/hamburger';
+@import 'parts/error-popups';
 
 //Common (sections)
 @import 'common/**/*.scss';

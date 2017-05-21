@@ -1,14 +1,14 @@
 .triangles {
   height: 100px;
   width: 100%;
-  z-index: 50;
+  z-index: 20;
   @include tablets {
     height: 70px;
   }
   &_pos_absolute {
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 0px;
   }
   &_fill_grey {
     fill: $grey;

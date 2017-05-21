@@ -1,3 +1,13 @@
 mixin svg(addClass, addId)
   svg(class=addClass)
     use(xlink:href=`assets/img/sprite/sprite.svg#${addId}`)
+
+mixin triangles_absolute(addClass, fillLeft, fillRight)
+  svg(class='triangles triangles_pos_absolute' xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 100', preserveAspectRatio='none')
+    polygon(class=fillLeft points='0,0 0,100 500,100 500,98')
+    polygon(class=fillRight points='1000,0   1000,100   500,100   500,98')
+
+mixin triangles(addClass, fillLeft, fillRight)
+  svg(class='triangles' xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 100', preserveAspectRatio='none')
+    polygon(class=fillLeft points='0,0 0,100 500,100 500,98')
+    polygon(class=fillRight points='1000,0   1000,100   500,100   500,98')

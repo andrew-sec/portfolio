@@ -1,11 +1,12 @@
 .blog__title_header {
-  background: url('../img/blog_header.png') no-repeat center center;
+  background-image: url('../img/blog_header.png');
+  background-repeat:  no-repeat;
+  background-position: center center;
   background-size: cover;
 }
 .header.header_blog {
   height: 496px;
   background-position: 0 0;
-  padding: 28px 0 0 0;
   margin-bottom: 70px;
   &::before {
     position: absolute;
@@ -21,13 +22,57 @@
   display: flex;
   justify-content: space-around;
   margin-bottom: 70px;
+  position: relative;
 }
 .aside {
   &_width_25 {
     width: 25%;
+    position: relative;
   }
   @include tablets {
-    display: none;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -284px;
+    width: 284px;
+    height: 100%;
+    background-color: #00bfa5;
+    color: #fff;
+    z-index: 30;
+    transition: all .5s ease;
+  }
+}
+.nav_blog {
+  @include tablets {
+    position: absolute;
+    top: 20%;
+  }
+  @include phone {
+    top: 5%;
+  }
+}
+.menu-trigger {
+  @include tablets {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 94%;;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $accent-color;
+    cursor: pointer;
+    transition: all .5s ease;
+    z-index: 500;
+    &_active {
+      left: 266px;
+    }
+  }
+}
+.fixed_on_phone {
+  @include tablets {
+    transform: translateX(284px);
   }
 }
 .section_content_width_65 {
@@ -37,6 +82,7 @@
   @include tablets {
     width: 100%;
     padding: 0 30px;
+    transition: all .5s ease;
   }
 }
 .aside__list {
@@ -52,6 +98,12 @@
     color: $accent-color;
     border-right-color: $accent-color;
     font-family: 'robotobold';
+  }
+  @include tablets {
+    color: rgba(#fff, .85);
+    &:hover {
+      color: #fff;
+    }
   }
 }
 .article__blog.subtitle_align_left {

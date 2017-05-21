@@ -1,10 +1,13 @@
 .feedback__form {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 0 0 5px 5px;
   overflow: hidden;
-  background: url('../img/form_blur.png') no-repeat 100% 100%;
+  background-image: url('../img/form_blur.png');
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
   background-size: cover;
   padding-top: 30px;
   margin-bottom: 70px;
@@ -33,6 +36,7 @@
 }
 .form__buttons {
   display: flex;
+  align-self: stretch;
 }
 .button__item {
   padding: 14px 32px;

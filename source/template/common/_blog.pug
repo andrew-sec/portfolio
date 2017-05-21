@@ -3,8 +3,28 @@ include ../mixins/mixin
 .wrapper
   .maincontent
     include _blog_header
+    
+    .fullscreen-menu
+      .fullscreen-menu__bg.fullscreen-menu__bg_left
+      .fullscreen-menu__bg.fullscreen-menu__bg_right
+      nav.fullscreen-menu__nav
+        ul.fullscreen-menu__list
+          li.fullscreen-menu__item
+            a.fullscreen-menu__link.title.text_font_63(href="/works.html")
+              span.title__text.text_color_white Мои работы
+          li.fullscreen-menu__item
+            a.fullscreen-menu__link.title.text_font_63(href="/about.html")
+              span.title__text.text_color_white Обо мне
+          li.fullscreen-menu__item
+            a.fullscreen-menu__link.title.text_font_63(href="/blog.html")
+              span.title__text.text_color_white Блог
+          li.fullscreen-menu__item
+            a.fullscreen-menu__link.title.text_font_63(href="/index.html")
+              span.title__text.text_color_white Авторизация
+
     section.section_blog
       aside.aside.aside_width_25
+        span.menu-trigger
         nav.nav_blog
           ul.aside__list
             li.aside__item
@@ -27,7 +47,6 @@ include ../mixins/mixin
           .article__code
             img.article__code-image(src="assets/img/code.jpg", alt="code")
 
-
         article.article_blog
           .title.text_font_35
             | Приёмы в вёрстке, без которых не обходится ни один сайт
@@ -37,7 +56,6 @@ include ../mixins/mixin
             p Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.
             p Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
       
-    
     footer.footer.footer_flex
       .footer__row
         nav.footer__nav

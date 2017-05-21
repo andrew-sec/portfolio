@@ -1,6 +1,7 @@
 include ../mixins/mixin
 
 header.header.header_blog
+  #header__bg.header__bg
   .header__top-line.header__top-line_width_80
     ul.socials.text_color_rgba-white
       li.socials__item.social__item_header
@@ -13,18 +14,19 @@ header.header.header_blog
         a.socials__link.socials__link_header(href='#')
           +svg('socials__icon socials__icon_header','in')
     
-    +svg('hamburger-menu__icon','hamburger')
+    .hamburger
+      span.hamburger__line
+      span.hamburger__line
+      span.hamburger__line
   
   .header__title_transparent
-    img(src="assets/img/blog_header.png", alt="blog header")
+    img#title_image_transparent.title_image_transparent(src="assets/img/blog_header.png", alt="blog header")
 
-  .login-box.login-box__bg_transparent
+  #login-box.login-box.login-box__bg_transparent
     .login-box__pic
       img.login-box__pic-elem(src='assets/img/user.jpg', alt='user-photo')
     .title.text_font_63.text_color_white
       span.title__text_white Блог
     span.login-box__subtitle_header
       | Личный сайт веб разработчика
-  svg(class='triangles' xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 100', preserveAspectRatio='none')
-    polygon(class='triangles_fill_white' points='0,0 0,100 500,100 500,90')
-    polygon(class='triangles_fill_white' points='1000,0   1000,100   500,100   500,90')
+  +triangles('triangles', 'triangles_fill_white', 'triangles_fill_white')

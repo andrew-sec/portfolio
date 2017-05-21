@@ -2,37 +2,88 @@ include ../mixins/mixin
 
 .wrapper
   .maincontent
+    .preloader
+      .preloader__spinner
+        .preloader__animation
+        .preloader__percents 0%
+    #parallax.parallax
+      .parallax__layer
+        img.parallax__image(src="assets/img/parallax/2.png", alt="parallax layer")
+      .parallax__layer
+        img.parallax__image(src="assets/img/parallax/3.png", alt="parallax layer")
+      .parallax__layer
+        img.parallax__image(src="assets/img/parallax/4.png", alt="parallax layer")
+      .parallax__layer
+        img.parallax__image(src="assets/img/parallax/5.png", alt="parallax layer")
+      .parallax__layer
+        img.parallax__image(src="assets/img/parallax/6.png", alt="parallax layer")
+      .parallax__layer
+        img.parallax__image(src="assets/img/parallax/7.png", alt="parallax layer")
     section.welcome.section_height_100vh
-      button.button.button_pos_absolute
+      button.button.button_pos_absolute#flip-to-back
         span.text_color_accent.text_color_white Авторизоваться
-      .login-box.login-box__welcome
-        .login-box__pic
-          img.login-box__pic-elem(src='assets/img/user.jpg', alt='user-photo')
-        span.login-box__title.text_size_28
-          | Андрей Секачев
-        span.login-box__subtitle
-          | Личный сайт веб разработчика
-        ul.socials.login-box__socials.socials_color_cyan
-          li.socials__item.socials__item_welcome
-            a(href='#' class=`socials__link`)
-              +svg('socials__icon','vk')
-          li.socials__item.socials__item_welcome
-            a(href='#' class=`socials__link`)
-              +svg('socials__icon','github')
-          li.socials__item.socials__item_welcome
-            a(href='#' class=`socials__link`)
-              +svg('socials__icon','in')
-        nav.navigation
-          ul.navigation__list
-            li.navigation__item
-              a(href=`works.html` class='navigation__link')
-                span.text_color_white Мои работы
-            li.navigation__item
-              a(href=`about.html` class='navigation__link')
-                span.text_color_white Обо мне
-            li.navigation__item
-              a(href=`blog.html` class='navigation__link')
-                span.text_color_white Блог
+      .flip-container
+        .flipper
+          .login-box.login-box__welcome
+            .login-box__pic
+              img.login-box__pic-elem(src='assets/img/user.jpg', alt='user-photo')
+            span.login-box__title.text_size_28
+              | Андрей Секачев
+            span.login-box__subtitle
+              | Личный сайт веб разработчика
+            ul.socials.login-box__socials.socials_color_cyan
+              li.socials__item.socials__item_welcome
+                a(href='#' class=`socials__link`)
+                  +svg('socials__icon','vk')
+              li.socials__item.socials__item_welcome
+                a(href='#' class=`socials__link`)
+                  +svg('socials__icon','github')
+              li.socials__item.socials__item_welcome
+                a(href='#' class=`socials__link`)
+                  +svg('socials__icon','in')
+            nav.navigation
+              ul.navigation__list
+                li.navigation__item
+                  a(href=`works.html` class='navigation__link')
+                    span.text_color_white Мои работы
+                li.navigation__item
+                  a(href=`about.html` class='navigation__link')
+                    span.text_color_white Обо мне
+                li.navigation__item
+                  a(href=`blog.html` class='navigation__link')
+                    span.text_color_white Блог
+
+          .login-block
+            .title.login-block__title.text_font_35
+              span.title__text Авторизируйтесь
+            form.form.form-auth#form_welcome
+              .form__inputs-block
+                label.form__label.form__label_login(for="login")
+                  input.form__input(id='login' type='text' placeholder='Логин' name='login')
+                label.form__label.form__label_pass(for="password")
+                  input.form__input(id='password' type='password' placeholder='Пароль' name='password')
+              .form__checks
+                label.form__label_check
+                  input.form__input(type='checkbox')
+                  span.label-text.label-text_checkbox Я человек
+                .form__checks-text
+                  span.text Вы точно не робот?
+                .form__answers
+                  label.form__label_radio
+                    input.form__input(type='radio' name='choice' value='yes')
+                    span.label-text.label-text_radio Да
+                  label.form__label_radio
+                    input.form__input(type='radio' name='choice' value='no')
+                    span.label-text.label-text_radio Не уверен
+            .form__buttons
+              button.button_auth.button_trigger#flip-to-front(type='button')
+                span.text_color_white На главную
+              button.button_auth.button_submit#button_submit(type='submit')
+                span.text_color_white Войти
+
+            .error-popup.error-popup_login Вы не ввели логин
+            .error-popup.error-popup_pass Вы не ввели пароль
+
       footer.footer.welcome__footer
         span.footer__copyright © Андрей Секачев | создано с любовью в LoftSchool       
       
